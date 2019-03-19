@@ -122,35 +122,36 @@ nav a:active{
 }
 
 .skills-section ul{
-    list-style: none;
-    padding: 5px;
+    list-style-type: none;
 }
 
 .skills-section ul li{
-    align-items: center
+    align-items: center;
+    
 }
 
 .skills-section ul li i{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .skills-section ul li span{
-    margin-left: 25px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: 4px;
     text-transform: uppercase;
+    padding-left: 30px;
+    padding-bottom: 50px;
 }
-
 
 /* Footer area */
 
 footer{
     height: 240px;
     background: #515151;
-    padding-left: 40px;
+    padding-left: 125px;
 }
+
 
 .links{
     padding-top: 60px;
