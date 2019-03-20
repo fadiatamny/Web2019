@@ -31,7 +31,7 @@ header,
 nav,
 main{
     margin-left: 125px;
-    margin-right: 125px;
+    /*Add margin right?*/
 }
 
 /*-----------------------------*/
@@ -87,7 +87,6 @@ nav a:active{
 
 .imgs-section{
     margin-top:40px;
-    width: 1360px;
 }
 
 .imgs-section img{
