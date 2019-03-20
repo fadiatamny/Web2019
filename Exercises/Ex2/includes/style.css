@@ -1,3 +1,7 @@
+/*-----------------------------*/
+/*Main inits*/
+/*-----------------------------*/
+
 *{
     margin: 0px;
     padding: 0px;
@@ -27,9 +31,12 @@ header,
 nav,
 main{
     margin-left: 125px;
+    margin-right: 125px;
 }
 
+/*-----------------------------*/
 /* Header area */
+/*-----------------------------*/
 
 header{
     margin-top:76px;
@@ -48,10 +55,13 @@ header a span{
     float:right;
     color:#222222;
     font-size: 70px;
+    font-weight: 500;
     margin-left: 110px;
 }
 
+/*-----------------------------*/
 /* main nav bar area */
+/*-----------------------------*/
 
 nav a:link,
 nav a:visited{
@@ -71,24 +81,34 @@ nav a:active{
     opacity: 1;
 }
 
+/*-----------------------------*/
 /* Main- Images section area */
+/*-----------------------------*/
 
 .imgs-section{
     margin-top:40px;
+    width: 1360px;
 }
+
 .imgs-section img{
     height: 450px;
     width: 350px;
-    margin-right:30px;
+    padding-left:30px;
     transform: scale(1.00);
     transition: transform 0.5s;
+}
+
+.imgs-section #sideimage{
+    padding-left:0;
 }
 
 .imgs-section img:hover{
     transform: scale(0.95);
 }
 
+/*-----------------------------*/
 /* Main- Text section area */
+/*-----------------------------*/
 
 .text-section{
     margin-top: 40px;
@@ -109,7 +129,9 @@ nav a:active{
     opacity: 0.7;
 }
 
+/*-----------------------------*/
 /* Main- Skills section area */
+/*-----------------------------*/
 
 .skills-section{
     margin-top:60px;
@@ -118,7 +140,11 @@ nav a:active{
 
 .skills-section h2{
     margin-bottom:26px;
-
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    color:#222222;
 }
 
 .skills-section ul{
@@ -127,11 +153,11 @@ nav a:active{
 
 .skills-section ul li{
     align-items: center;
-    
+    margin-bottom: 30px;
 }
 
 .skills-section ul li i{
-    font-size: 17px;
+    font-size: 45px;
 }
 
 .skills-section ul li span{
@@ -141,17 +167,20 @@ nav a:active{
     letter-spacing: 4px;
     text-transform: uppercase;
     padding-left: 30px;
-    padding-bottom: 50px;
+    position: absolute;
+    padding-top: 10px;
 }
 
+/*-----------------------------*/
 /* Footer area */
+/*-----------------------------*/
 
 footer{
     height: 240px;
     background: #515151;
     padding-left: 125px;
+    padding-right: 125px;
 }
-
 
 .links{
     padding-top: 60px;
