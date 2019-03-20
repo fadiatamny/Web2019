@@ -191,7 +191,6 @@ footer{
     color: #FFFFFF;
     border-color: #C6B393;
     padding-bottom: 5px;
-    transition: border-bottom 0.2s; 
 }
 
 .links a:hover,
