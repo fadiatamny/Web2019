@@ -122,6 +122,7 @@ nav a:active{
 }
 
 .text-section p{
+    margin-top: 8px;
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
