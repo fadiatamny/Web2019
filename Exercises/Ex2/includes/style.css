@@ -27,11 +27,14 @@ body{
     font-family: 'Lato', sans-serif;
     font-style: normal;
 }
-header,
-nav,
-main{
-    margin-left: 125px;
-    /*Add margin right?*/
+
+.Wrapper{
+    width: 1360px;
+    margin: 0px auto;
+}
+
+.clear{
+    clear:both;
 }
 
 /*-----------------------------*/
@@ -47,12 +50,12 @@ header{
 #logo{
     background: url(../images/logo.png) no-repeat left;
     background-size: contain;
+    float: left;
     height: 88px;
-    display: inline-block;
 }
 
-header a span{
-    float:right;
+#logotext{
+    position: relative;
     color:#222222;
     font-size: 70px;
     font-weight: 500;
@@ -92,13 +95,10 @@ nav a:active{
 .imgs-section img{
     height: 450px;
     width: 350px;
-    padding-left:30px;
     transform: scale(1.00);
     transition: transform 0.5s;
-}
-
-.imgs-section #sideimage{
-    padding-left:0;
+    float:left;
+    margin-right: 30px;
 }
 
 .imgs-section img:hover{
@@ -178,8 +178,6 @@ nav a:active{
 footer{
     height: 240px;
     background: #515151;
-    padding-left: 125px;
-    padding-right: 125px;
 }
 
 .links{
