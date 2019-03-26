@@ -29,8 +29,8 @@ body{
 }
 
 .Wrapper{
-    width: 1360px;
-    margin: 0px auto;
+    width: 1110px;
+    margin: 0px 125px;
 }
 
 .clear{
@@ -55,7 +55,6 @@ header{
 }
 
 #logotext{
-    position: relative;
     color:#222222;
     font-size: 70px;
     font-weight: 500;
@@ -95,10 +94,13 @@ nav a:active{
 .imgs-section img{
     height: 450px;
     width: 350px;
-    transform: scale(1.00);
     transition: transform 0.5s;
-    float:left;
-    margin-right: 30px;
+    float: left;
+    margin-left: 30px;
+}
+
+.imgs-section #firstimg{
+    margin: 0;
 }
 
 .imgs-section img:hover{
@@ -215,6 +217,7 @@ footer{
 .border{
     height: 1px;
     mix-blend-mode: normal;
+    width: 1110px;
     opacity: 0.2;
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
