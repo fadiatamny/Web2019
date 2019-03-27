@@ -33,7 +33,7 @@ footer{
 
 .Wrapper{
     width: 1110px; /* width that the designer specified in the website*/
-    margin: 0px 125px;
+    margin: 0px auto;
 }
 
 .clear{
