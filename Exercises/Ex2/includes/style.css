@@ -12,8 +12,6 @@ nav,
 main,
 section,
 footer,
-aside,
-article,
 div{
     display : block;
 }
@@ -28,8 +26,13 @@ body{
     font-style: normal;
 }
 
+header,
+footer{
+    width: 100%;
+}
+
 .Wrapper{
-    width: 1110px;
+    width: 1110px; /* width that the designer specified in the website*/
     margin: 0px 125px;
 }
 
@@ -171,6 +174,28 @@ nav a:active{
     padding-left: 30px;
     position: absolute;
     padding-top: 10px;
+}
+
+/*-----------------------------*/
+/* Main- images overlay area */
+/*-----------------------------*/
+
+#back-image{
+    width: 570px;
+    height: 417px;
+    margin-bottom: 200px;
+    position: relative;
+    float: left;
+}
+
+#front-image{
+    width: 350px;
+    height: 453px;
+    box-shadow: 30px 80px 180px rgba(0, 0, 0, 0.25);
+    position: relative;
+    float: left;
+    left:-225px;
+    top:100px;
 }
 
 /*-----------------------------*/
