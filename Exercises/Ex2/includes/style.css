@@ -159,21 +159,29 @@ nav a:active{
 .skills-section ul li{
     align-items: center;
     margin-bottom: 30px;
+
+    background: #E5E5E5;
+    border-radius: 34px;
+    height: 54px;
+    width: 54px;
 }
 
 .skills-section ul li i{
-    font-size: 45px;
+    position: relative;
+    font-size: 30px; /* size calculated relative to location in circle */
+    left: 12px;
+    top:12px;
 }
 
 .skills-section ul li span{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px; /* had to make it bigger because lato font is naturally smaller */
     line-height: 24px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    padding-left: 30px;
+    margin-left: 52px; /* calculated distance from icon inside cirlce with circle radius */
     position: absolute;
-    padding-top: 10px;
+    margin-top: 15px;
 }
 
 /*-----------------------------*/
