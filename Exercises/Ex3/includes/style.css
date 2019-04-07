@@ -1,0 +1,333 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header,
+main,
+nav,
+article,
+aside,
+section,
+footer{
+    display: block;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+.wrapper{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header,
+footer{
+    width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+/*-----------------------------*/
+/*Layout1*/
+/*-----------------------------*/
+
+
+header{
+    background-color: #F2E9E9;
+    height: 123px;
+    padding-top: 1px;  
+}
+
+footer{
+    height: 41px;
+    background-color: #000000;
+}
+
+nav{
+    width: 400px;
+    margin: 50px auto;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 26px;
+    text-transform: uppercase;
+}
+
+nav li{
+    margin-right: 18px;
+    float: left;
+}
+
+nav a{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: normal;
+    color: #000000;
+}
+
+
+.text,
+.rects{
+    float: left;
+    width: 50%;
+    height: 624px;
+}
+
+.rects{
+    float: left;
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+
+.text{
+    margin-top: 267px;
+    
+}
+
+.text h1,
+.text h3{
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+}
+
+.text h1{
+    font-size: 72px;
+}
+
+.text h3{
+    font-size: 24px;
+}
+
+.rects div{
+    background-color: #EBEF18;
+}
+
+.rect1{
+    position: relative;
+    top:135px;
+    left: 0;
+    width: 75px;
+    height: 23px;
+}
+
+.rect2{
+    position: relative;
+    top: 143px;
+    left: 0;
+    width: 136px;
+    height: 46px;
+}
+
+.rect3{
+    position: relative;
+    top: 154px;
+    left: 0;
+    width: 134px;
+    height: 404px;
+}
+
+.rect4{
+    position: relative;
+    top: 165px;
+    left: 0;
+    width: 88px;
+    height: 28px; 
+}
+
+.rect5{
+    position: relative;
+    top: 172px;
+    left: 0;
+    width: 25px;
+    height: 26px;
+}
+
+.rect6{
+    position: absolute;
+    top: 673px;
+    left: 32px;
+    width: 25px;
+    height: 26px;
+    
+    
+}
+
+.rect7{
+    position: absolute;
+    top: 135px;
+    left: 149px;
+    width: 246px;
+    height: 352px;
+}
+
+.rect8{
+    position: absolute;
+    top: 503px;
+    left: 149px;
+    width: 123px;
+    height: 212px;
+}
+
+.rect9{
+    position: absolute;
+    top: 503px;
+    left: 286px;
+    width: 55px;
+    height: 105px;
+}
+
+.rect10{
+    position: absolute;
+    top: 615px;
+    left: 286px;
+    width: 110px;
+    height: 58px;
+}
+
+.rect11{
+    position: absolute;
+    top: 91px;
+    left: 409px;
+    width: 28px;
+    height: 55px;
+}
+
+.rect12{
+    position: absolute;
+    top: 157px;
+    left: 409px;
+    width: 28px;
+    height: 55px;
+}
+
+.rect13{
+    position: absolute;
+    top: 223px;
+    left: 409px;
+    width: 28px;
+    height: 55px;
+}
+
+.rect14{
+    position: absolute;
+    top: 289px;
+    left: 409px;
+    width: 28px;
+    height: 198px;
+}
+
+.rect15{
+    position: absolute;
+    top: 503px;
+    left: 382px;
+    width: 55px;
+    height: 105px;
+}
+
+/*-----------------------------*/
+/*Layout2*/
+/*-----------------------------*/
+
+#lay2 main{
+    float: left;
+    height: 1925px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+.rects1,
+.rects2{
+    float: left;
+}
+
+
+.rects1{
+    margin-top: 120px;
+}
+.rects2{
+    margin-top: 290px;
+    margin-left: 55px;
+}
+
+.rect{
+    background-color: #C4C4C4;
+    margin-bottom: 80px;
+    width: 457px;
+    height: 299px;
+}
+
+aside{
+    float: right;
+    width: 169px;
+    height: 1925px;
+    background-color: #ebef18;
+}
+
+aside p{
+    margin-top: 1240px;;
+    text-align: center;
+    font-size: 96px;
+    word-wrap: break-word;
+    width: 81px;
+    margin-left: 44px;
+ }
+
+.srect1
+{
+    position: relative;
+    top: 119px;
+    height: 80px;
+    width: 80px;
+    background-color: #000000;
+    float: left;
+}
+
+.srect2
+{
+    position: relative;
+    top: 247px;
+    height: 80px;
+    width: 80px;
+    background-color: #ffffff;
+    float: right;
+}
+
+.srect3
+{
+    position: relative;
+    top: 417px;
+    height: 80px;
+    width: 80px;
+    background-color: #000000;
+    float: left;
+}
+
+/*-----------------------------*/
+/*Layout3*/
+/*-----------------------------*/
