@@ -255,10 +255,14 @@ nav a{
 
 #lay2 main{
     float: left;
-    height: 1925px;
     overflow: hidden;
     margin: 0 auto;
+}
 
+#lay2 footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 .rects1,
@@ -331,3 +335,25 @@ aside p{
 /*-----------------------------*/
 /*Layout3*/
 /*-----------------------------*/
+
+#lay3 main,
+#lay3 nav{
+    float: left;
+}
+
+#lay3 aside{
+    float: right;
+    background-color: #18ef214d;
+    opacity: 0.3;
+}
+
+#lay3 nav{
+    background-color: #E5E5E5;
+    width: 372px;
+}
+
+#lay3 .block{
+    background-color: #EBEF18;
+    width: 100%;
+    height: 463px;
+}
