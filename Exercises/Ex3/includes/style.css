@@ -57,7 +57,7 @@ footer {
 nav{
   width: 300px;
   height: 33px;
-  margin: 50px auto;
+  margin: 40px auto;
 }
 
 nav ul{
@@ -83,6 +83,19 @@ nav a{
 
 nav a:hover{
   color: #1434E1;
+}
+
+nav a:hover.selected{
+  color: #000000;
+}
+
+nav span{
+  position: relative;
+  top: 10px;
+}
+
+.selected{
+  background: url(../images/dot.png) no-repeat center top;
 }
 
 /*-----------------------------*/
@@ -372,10 +385,24 @@ nav a:hover{
   background-color: #000000;
   float: left;
   margin: 123px 64px;
+  text-align: center;
+  font-weight: normal;
+  line-height: normal;
 }
 
 #layout3 main{
   width: 964px;
   height: 995px;
   overflow: scroll;
+}
+
+.show p{
+  color: #ffffff;
+}
+
+#layout3 .box.correct{
+  background-color: #12bd0c;
+}
+.box.correct p{
+  color: #ffffff;
 }
