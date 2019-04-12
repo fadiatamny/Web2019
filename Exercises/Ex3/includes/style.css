@@ -2,10 +2,9 @@
 /*inits*/
 /*-----------------------------*/
 
-
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 header,
@@ -14,346 +13,369 @@ nav,
 article,
 aside,
 section,
-footer{
-    display: block;
+footer {
+  display: block;
 }
 
-body{
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
+body {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
 }
 
-.wrapper{
-    width: 1140px;
-    margin: 0 auto;
+.wrapper {
+  width: 952px; /* Calculated based on website */
+  margin: 0 auto;
 }
 
-.clear{
-    clear: both;
+.clear {
+  clear: both;
 }
 
 header,
-footer{
-    width: 100%;
+footer {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 
-a{
-    text-decoration: none;
+header {
+  width: 100%;
+  height: 123px;
+  background-color: #f2e9e9;
+  padding-top: 1px;
+}
+
+footer {
+  width: 100%;
+  height: 41px;
+  background-color: #000000;
+}
+
+nav{
+  width: 300px;
+  height: 33px;
+  margin: 50px auto;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  margin-top: 26px;
+  text-transform: uppercase;
+}
+
+nav li{
+  float: left;
+}
+
+nav a{
+  display: block;
+  color: #000000;
+  margin-right: 17px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+nav a:hover{
+  color: #1434E1;
 }
 
 /*-----------------------------*/
 /*Layout1*/
 /*-----------------------------*/
 
-
-header{
-    background-color: #F2E9E9;
-    height: 123px;
-    padding-top: 1px;  
+#layout1 main {
+  width: 881px;
+  height: 860px;
+  margin: 0 auto;
 }
 
-footer{
-    height: 41px;
-    background-color: #000000;
+#layout1 .text{
+  float:left;
+  width: 50%;
+  height: 120px;
+  margin-top: 267px;
 }
 
-nav{
-    width: 400px;
-    margin: 50px auto;
+#layout1 h1,
+#layout1 h3{
+  font-weight: bold;
+  line-height: normal;
+  color: #000000;
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin-bottom: 40px;
-    margin-top: 26px;
-    text-transform: uppercase;
+#layout1 h1{
+  font-size: 72px;
 }
 
-nav li{
-    margin-right: 18px;
-    float: left;
+#layout1 h3{
+  font-size: 24px;
 }
 
-nav a{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: normal;
-    color: #000000;
+#layout1 .boxes div{
+  position: absolute;
+  background-color: #EBEF18;
 }
 
-
-.text,
-.rects{
-    float: left;
-    width: 50%;
-    height: 624px;
+#layout1 .boxes{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  float: left;
+  width: 50%;
+  height: 500px;
+  margin-top: 91px;
 }
 
-.rects{
-    float: left;
-    height: 500px;
-    top: 0px;
-    left: 0px;
-    position: relative;
+#layout1 .box1{
+  top: 44px;
+  left: 0px;
+  width: 75px;
+  height: 23px;
 }
 
-.text{
-    margin-top: 267px;
-    
+#layout1 .box2{
+  top: 75px;
+  left: 0px;
+  width: 136px;
+  height: 46px;
 }
 
-.text h1,
-.text h3{
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    color: #000000;
+#layout1 .box3{
+  top: 129px;
+  left: 0px;
+  width: 133px;
+  height: 404px;
 }
 
-.text h1{
-    font-size: 72px;
+#layout1 .box4{
+  top: 541px;
+  left: 0px;
+  width: 88px;
+  height: 28px;
 }
 
-.text h3{
-    font-size: 24px;
+#layout1 .box5{
+  top: 577px;
+  left: 0px;
+  width: 25px;
+  height: 26px;
 }
 
-.rects div{
-    background-color: #EBEF18;
+#layout1 .box6{
+  top: 577px;
+  left: 33px;
+  width: 25px;
+  height: 26px;
 }
 
-.rect1{
-    position: relative;
-    top:135px;
-    left: 0;
-    width: 75px;
-    height: 23px;
+#layout1 .box7{
+  top: 44px;
+  left: 149px;
+  width: 246px;
+  height: 352px;
 }
 
-.rect2{
-    position: relative;
-    top: 143px;
-    left: 0;
-    width: 136px;
-    height: 46px;
+#layout1 .box8{
+  top: 412px;
+  left: 149px;
+  width: 123px;
+  height: 212px;
 }
 
-.rect3{
-    position: relative;
-    top: 154px;
-    left: 0;
-    width: 134px;
-    height: 404px;
+#layout1 .box9{
+  top: 412px;
+  left: 288px;
+  width: 55px;
+  height: 105px;
 }
 
-.rect4{
-    position: relative;
-    top: 165px;
-    left: 0;
-    width: 88px;
-    height: 28px; 
+#layout1 .box10{
+  top: 525px;
+  left: 288px;
+  width: 110px;
+  height: 58px;
 }
 
-.rect5{
-    position: relative;
-    top: 172px;
-    left: 0;
-    width: 25px;
-    height: 26px;
+#layout1 .box11{
+  top: 412px;
+  left: 384px;
+  width: 55px;
+  height: 105px;
 }
 
-.rect6{
-    position: absolute;
-    top: 673px;
-    left: 32px;
-    width: 25px;
-    height: 26px;
-    
-    
+#layout1 .box12{
+  top: 0px;
+  left: 409px;
+  width: 28px;
+  height: 55px;
 }
 
-.rect7{
-    position: absolute;
-    top: 135px;
-    left: 149px;
-    width: 246px;
-    height: 352px;
+#layout1 .box13{
+  top: 66px;
+  left: 409px;
+  width: 28px;
+  height: 55px;
 }
 
-.rect8{
-    position: absolute;
-    top: 503px;
-    left: 149px;
-    width: 123px;
-    height: 212px;
+#layout1 .box14{
+  top: 132px;
+  left: 409px;
+  width: 28px;
+  height: 55px;
 }
 
-.rect9{
-    position: absolute;
-    top: 503px;
-    left: 286px;
-    width: 55px;
-    height: 105px;
-}
-
-.rect10{
-    position: absolute;
-    top: 615px;
-    left: 286px;
-    width: 110px;
-    height: 58px;
-}
-
-.rect11{
-    position: absolute;
-    top: 91px;
-    left: 409px;
-    width: 28px;
-    height: 55px;
-}
-
-.rect12{
-    position: absolute;
-    top: 157px;
-    left: 409px;
-    width: 28px;
-    height: 55px;
-}
-
-.rect13{
-    position: absolute;
-    top: 223px;
-    left: 409px;
-    width: 28px;
-    height: 55px;
-}
-
-.rect14{
-    position: absolute;
-    top: 289px;
-    left: 409px;
-    width: 28px;
-    height: 198px;
-}
-
-.rect15{
-    position: absolute;
-    top: 503px;
-    left: 382px;
-    width: 55px;
-    height: 105px;
+#layout1 .box15{
+  top: 198px;
+  left: 409px;
+  width: 28px;
+  height: 198px;
 }
 
 /*-----------------------------*/
 /*Layout2*/
 /*-----------------------------*/
 
-#lay2 main{
-    float: left;
-    overflow: hidden;
-    margin: 0 auto;
+#layout2 .wrapper{
+  margin: 0 auto;
+  width: 969px;
 }
 
-#lay2 footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
+#layout2 main{
+  float: left;
+  overflow: hidden;
+  width: 1271px;
+  height: 1860px;
 }
 
-.rects1,
-.rects2{
-    float: left;
+.boxes1,
+.boxes2{
+  float:left;
+  width: 457px;
+  height: 1860px;
+  margin-top: 119px;
+}
+
+.boxes2{
+  float: right;
+  margin-top:267px;
+}
+
+.boxes1 div,
+.boxes2 div{
+  height: 299px;
+  width: 457px;
+  background-color: #c4c4c4;
+  margin-bottom: 70px;
 }
 
 
-.rects1{
-    margin-top: 120px;
-}
-.rects2{
-    margin-top: 290px;
-    margin-left: 55px;
-}
-
-.rect{
-    background-color: #C4C4C4;
-    margin-bottom: 80px;
-    width: 457px;
-    height: 299px;
+#layout2 aside{
+  float: right;
+  width: 169px;
+  height: 1860px;
+  background-color: #ebef18;
 }
 
-aside{
-    float: right;
-    width: 169px;
-    height: 1925px;
-    background-color: #ebef18;
+#layout2 .side1,
+#layout2 .side2,
+#layout2 .side3{
+  position: relative;
+  height: 80px;
+  width: 80px;
 }
 
-aside p{
-    margin-top: 1240px;;
-    text-align: center;
-    font-size: 96px;
-    word-wrap: break-word;
-    width: 81px;
-    margin-left: 44px;
- }
-
-.srect1
-{
-    position: relative;
-    top: 119px;
-    height: 80px;
-    width: 80px;
-    background-color: #000000;
-    float: left;
+#layout2 .side1{
+  top: 119px;
+  left: 0;
+  background-color: #000000;
 }
 
-.srect2
-{
-    position: relative;
-    top: 247px;
-    height: 80px;
-    width: 80px;
-    background-color: #ffffff;
-    float: right;
+#layout2 .side2{
+  top: 247px;
+  left: 89px;
+  background-color: #ffffff;
 }
 
-.srect3
-{
-    position: relative;
-    top: 417px;
-    height: 80px;
-    width: 80px;
-    background-color: #000000;
-    float: left;
+#layout2 .side3{
+  top: 616px;
+  left: 0;
+  background-color: #000000;
+}
+
+#layout2 aside ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1140px;
+  margin-left: 44px;
+
+}
+
+#layout2 aside a{
+  color: #000000;
+}
+
+#layout2 footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 /*-----------------------------*/
 /*Layout3*/
 /*-----------------------------*/
 
-#lay3 main,
-#lay3 nav{
-    float: left;
+#layout3 .main-nav{
+  float: left;
+  background-color: #E5E5E5;
+  width: 372px;
+  height: 995px;
 }
 
-#lay3 aside{
-    float: right;
-    background-color: #18ef214d;
-    opacity: 0.3;
+#layout3 nav{
+  margin-top: 123px;
 }
 
-#lay3 nav{
-    background-color: #E5E5E5;
-    width: 372px;
+#layout3 main{
+  float: left;
 }
 
-#lay3 .block{
-    background-color: #EBEF18;
-    width: 100%;
-    height: 463px;
+#layout3 aside{
+  float: right;
+  width: 104px;
+  height: 995px;
+  background-color: #18ef214d;
+  opacity: 0.3;
+}
+
+#layout3 .block{
+  width: 100%;
+  height: 463px;
+  background-color: #EBEF18;
+}
+
+#layout3 .button{
+  width: 80px;
+  height: 80px;
+  background-color: #000000;
+  margin: 20px;
+  float: right;
+}
+
+#layout3 .box{
+  background-color: #000000;
+  float: left;
+  margin: 123px 64px;
+}
+
+#layout3 main{
+  width: 964px;
+  height: 995px;
+  overflow: scroll;
 }
