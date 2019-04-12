@@ -403,6 +403,36 @@ nav span{
 #layout3 .box.correct{
   background-color: #12bd0c;
 }
+
 .box.correct p{
-  color: #ffffff;
+  color: #ffffff; 
+}
+
+/*-----------------------------*/
+/*Mobile Querries*/
+/*-----------------------------*/
+
+@media (max-width:767px){
+    
+  #layout3 .main-nav{
+    height: 105px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #layout3 nav{
+      margin-top: 0;
+  }
+
+  #layout3 .block{
+    display: none;
+  }
+  
+  #layout3 aside{
+    display: none;
+  }
+
+  #layout3 main{
+      width: 100%;
+  }
 }

@@ -34,11 +34,9 @@ var generateBoxes = function(){
             }
           });
 
-          
+
         boxshow.appendChild(box);
     }
-
-    initGame();
 };
 
 var compareValues = function(){
@@ -52,20 +50,26 @@ var compareValues = function(){
     slashIndex=str2.indexOf('</p');
     var fstr2=str2.substring(commaIndex+2,slashIndex);
 
+    if(list[0].className.includes('correct') || list[1].className.includes('correct') )
+        return -1;
+
     if(fstr1 == fstr2)
-        return true;
-    return false;
+        return 1;
+    return 0;
 };
 
 var checkGame = function(){
-    if(compareValues()){
+    var x = compareValues();
+    if( x == 1){
         for( var i = 0; i < list.length; ++i){
             list[i].className = list[i].className.replace('show','correct');
         }   
     }
     else{
-        for( var i = 0; i < list.length; i++){ 
-            list[i].className = list[i].className.replace('show','');
-         }
+        if( x == 0){
+            for( var i = 0; i < list.length; i++){ 
+                list[i].className = list[i].className.replace('show','');
+            }
+        }
     }
 }
