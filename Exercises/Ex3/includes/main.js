@@ -21,11 +21,13 @@ var generateBoxes = function(){
 
         box.addEventListener('click', function(){
             if( !this.className.includes('show')){
-                this.className = this.className + ' show';
-                list.push(this);
-                if(list.length == 2){
-                    checkGame();
-                    list = [];
+                if(!this.className.includes('correct')){
+                    this.className = this.className + ' show';
+                    list.push(this);
+                    if(list.length == 2){
+                        checkGame();
+                        list = [];
+                    }
                 }
             }
             else{
@@ -50,26 +52,20 @@ var compareValues = function(){
     slashIndex=str2.indexOf('</p');
     var fstr2=str2.substring(commaIndex+2,slashIndex);
 
-    if(list[0].className.includes('correct') || list[1].className.includes('correct') )
-        return -1;
-
     if(fstr1 == fstr2)
-        return 1;
-    return 0;
+        return true;
+    return false;
 };
 
 var checkGame = function(){
-    var x = compareValues();
-    if( x == 1){
+    if(compareValues()){
         for( var i = 0; i < list.length; ++i){
             list[i].className = list[i].className.replace('show','correct');
         }   
     }
     else{
-        if( x == 0){
-            for( var i = 0; i < list.length; i++){ 
-                list[i].className = list[i].className.replace('show','');
-            }
+        for( var i = 0; i < list.length; i++){
+            list[i].className = list[i].className.replace('show','');
         }
     }
 }
