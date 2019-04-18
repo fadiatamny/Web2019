@@ -24,10 +24,12 @@ var generateBoxes = function(){
                 if(!this.className.includes('correct')){
                     this.className = this.className + ' show';
                     list.push(this);
-                    if(list.length == 2){
-                        checkGame();
-                        list = [];
-                    }
+                    setTimeout(function(){
+                        if(list.length == 2){
+                            checkGame();
+                            list = [];
+                        }
+                     }, 1000);
                 }
             }
             else{
