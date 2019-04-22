@@ -5,12 +5,9 @@ var nav = document.getElementById('nav');
 
 var height = 80;
 var width = 80;
-var startHeight = 995;
-var row = 0;
-var offset = parseInt(window.getComputedStyle(nav).height.replace("px",""));
-var boxesHeight = 0;
-var boxesWidth = 0;
-var click = 0;
+
+var startHeight = 995; //main height to start with.
+var boxesWidth = 0; // used to track the amount of boxes divided in rows.
 
 //var charArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var charArray = ['F','A','D','I'];
@@ -19,9 +16,7 @@ var list = [];
 
 var generateBoxes = function(){
 
-    var mainWidth =parseInt(window.getComputedStyle(main).width.replace("px",""));
-    ++click;
-
+    //#region create Element
     for(var i = 0; i < 3; ++i){
         box = document.createElement('DIV');
         box.style.height = height+'px';
@@ -32,18 +27,18 @@ var generateBoxes = function(){
         height = height + 20;
         width = width + 20;
         boxesWidth += width + 128 ;
-
+        
         box.addEventListener('click', function(){
             if( !this.className.includes('show')){
                 if(!this.className.includes('correct')){
                     this.className = this.className + ' show';
                     list.push(this);
-                    setTimeout(function(){
+                    setTimeout(function(){ //timer delay after 0.5 sec to show the letter.
                         if(list.length == 2){
                             checkGame();
                             list = [];
                         }
-                     }, 1000);
+                     }, 500);
                 }
             }
             else{
@@ -51,37 +46,49 @@ var generateBoxes = function(){
                 list = [];
             }
           });
-
-
         boxshow.appendChild(box);
     }
+    //#endregion
 
-    
+    //#region checkMobile
+    // check if youre in mobile view or not (make inital blank screen look better)
     var intViewportWidth = window.innerWidth;
-    console.log(intViewportWidth);
-    if(click > 0 && intViewportWidth <= 767)
+    
+    if( intViewportWidth <= 767 )
         main.style.height = "auto";
+    //#endregion
 
-    var curr = (boxesWidth/964);
-    var newHeight = startHeight;
-    while( curr > 1 && click > 2 && intViewportWidth > 767){
-        newHeight += height + 246;
-        aside.style.height = newHeight + "px";
-        nav.style.height =  newHeight + "px";
-        --curr;
+    //#region Resize page
+
+    var mainHeight = parseInt(window.getComputedStyle(main).height.replace("px",""));
+    var mainWidth = parseInt(window.getComputedStyle(main).width.replace("px",""));
+
+    if(intViewportWidth > 767 && mainHeight >= 955){
+        var newHeight = startHeight;
+        var rowCount = (boxesWidth/mainWidth); //numbers of rows created by the boxes
+        while( rowCount > 2){
+            newHeight += height + 246;
+            aside.style.height = newHeight + "px";
+            nav.style.height =  newHeight + "px";
+            --rowCount;
+        }
     }
+    //#endregion
+
 };
 
 var compareValues = function(){
 
     var str1 = list[0].innerHTML;
     var str2 = list[1].innerHTML;
-    var commaIndex=str1.indexOf('">');
+
+    var index=str1.indexOf('">');
     var slashIndex=str1.indexOf('</p');
-    var fstr1=str1.substring(commaIndex+2,slashIndex);
-    commaIndex=str2.indexOf('">');
+    var fstr1=str1.substring(index+2,slashIndex);
+
+    index=str2.indexOf('">');
     slashIndex=str2.indexOf('</p');
-    var fstr2=str2.substring(commaIndex+2,slashIndex);
+    var fstr2=str2.substring(index+2,slashIndex);
 
     if(fstr1 == fstr2)
         return true;
