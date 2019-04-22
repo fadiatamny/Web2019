@@ -353,7 +353,7 @@ nav span{
   float: left;
   background-color: #E5E5E5;
   width: 372px;
-  height: 995px;
+  height: 100vh;
 }
 
 #layout3 nav{
@@ -362,12 +362,13 @@ nav span{
 
 #layout3 main{
   float: left;
+  width: 964px;
 }
 
 #layout3 aside{
   float: right;
   width: 104px;
-  height: 995px;
+  height: 100vh;
   background-color: #18ef214d;
   opacity: 0.3;
 }
@@ -393,12 +394,6 @@ nav span{
   text-align: center;
   font-weight: normal;
   line-height: normal;
-}
-
-#layout3 main{
-  width: 964px;
-  height: 995px;
-  overflow: scroll;
 }
 
 .show p{
@@ -435,8 +430,6 @@ nav span{
 
   #layout3 main{
     width: 964px;
-    height: 995px;
-    overflow: scroll;
   }
 }
 
@@ -452,10 +445,6 @@ nav span{
   #layout3 nav{
       margin-top: 0;
   }
-
-  #layout3 .block{
-    display: none;
-  }
   
   #layout3 aside{
     display: none;
@@ -463,6 +452,7 @@ nav span{
 
   #layout3 main{
       width: 100%;
+      height: auto;
   }
 }
 

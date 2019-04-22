@@ -1,7 +1,16 @@
 var boxshow = document.getElementById('js-boxshow');
+var main = document.getElementById('main');
+var aside = document.getElementById('aside');
+var nav = document.getElementById('nav');
 
 var height = 80;
 var width = 80;
+var startHeight = 995;
+var row = 0;
+var offset = parseInt(window.getComputedStyle(nav).height.replace("px",""));
+var boxesHeight = 0;
+var boxesWidth = 0;
+var click = 0;
 
 //var charArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var charArray = ['F','A','D','I'];
@@ -9,6 +18,10 @@ var charArray = ['F','A','D','I'];
 var list = [];
 
 var generateBoxes = function(){
+
+    var mainWidth =parseInt(window.getComputedStyle(main).width.replace("px",""));
+    ++click;
+
     for(var i = 0; i < 3; ++i){
         box = document.createElement('DIV');
         box.style.height = height+'px';
@@ -18,6 +31,7 @@ var generateBoxes = function(){
         box.innerHTML= '<p style="margin-top: '+height*0.25+'px; font-size: '+height*0.35+'px;">'+charArray[random]+'</p>';
         height = height + 20;
         width = width + 20;
+        boxesWidth += width + 128 ;
 
         box.addEventListener('click', function(){
             if( !this.className.includes('show')){
@@ -40,6 +54,16 @@ var generateBoxes = function(){
 
 
         boxshow.appendChild(box);
+    }
+
+    var curr = (boxesWidth/964);
+    console.log(curr);
+    var newHeight = startHeight;
+    while( curr > 1 && click > 2){
+        newHeight += height + 246;
+        aside.style.height = newHeight + "px";
+        nav.style.height =  newHeight + "px";
+        --curr;
     }
 };
 
