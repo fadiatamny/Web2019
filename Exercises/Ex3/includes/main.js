@@ -56,10 +56,15 @@ var generateBoxes = function(){
         boxshow.appendChild(box);
     }
 
+    
+    var intViewportWidth = window.innerWidth;
+    console.log(intViewportWidth);
+    if(click > 0 && intViewportWidth <= 767)
+        main.style.height = "auto";
+
     var curr = (boxesWidth/964);
-    console.log(curr);
     var newHeight = startHeight;
-    while( curr > 1 && click > 2){
+    while( curr > 1 && click > 2 && intViewportWidth > 767){
         newHeight += height + 246;
         aside.style.height = newHeight + "px";
         nav.style.height =  newHeight + "px";
