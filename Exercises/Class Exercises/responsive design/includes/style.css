@@ -1,0 +1,95 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header,
+  main,
+  nav,
+  article,
+  aside,
+  section,
+  footer {
+    display: block;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+  }
+
+  #a{
+      background: red;
+  }
+
+  #b{
+      background: blue;
+  }
+
+  #c{
+      background: yellow;
+  }
+
+
+  @media (min-width: 769px)
+  {
+      #a,#b{
+          float: left;
+      }
+      #c{
+          float: right;
+      }
+
+      #a{
+        width: 40%;
+        margin-right: 5%;
+        font-size: 1.4vw;
+      }
+
+      #b{
+        width: 25%;
+        margin-right: 5%;
+        font-size: 1.1vw;
+      }
+
+      #c{
+        width: 25%;
+        font-size: 1.2vw;
+      }
+  }
+  
+  @media (min-width: 426px) and (max-width: 768px)
+  {
+      #a{
+        float: left;
+        width: 55%;
+        margin-right: 5%;
+      }
+
+      #b{
+        float: right;
+        margin: 0px;
+        width: 35%;
+      }
+
+      #c{
+        float: none;
+        width: 100%;
+        clear: both;
+      }
+  }
+  
+  @media (max-width: 425px)
+  {
+      #a,#b,#c{
+          width: 100%;
+          margin: 0px;
+          border-bottom: 1px solid black;
+          background: grey;
+      }
+  }
+  

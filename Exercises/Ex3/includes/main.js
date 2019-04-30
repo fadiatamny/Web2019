@@ -29,51 +29,54 @@ var generateBoxes = function(){
         boxesWidth += width + 128 ;
         
         box.addEventListener('click', function(){
+            if(list.length >= 2){
+                clearItems();
+            }
+
             if( !this.className.includes('show')){
                 if(!this.className.includes('correct')){
                     this.className = this.className + ' show';
                     list.push(this);
-                    setTimeout(function(){ //timer delay after 0.5 sec to show the letter.
-                        if(list.length == 2){
-                            checkGame();
-                            list = [];
-                        }
-                     }, 500);
+                    if(list.length == 2){
+                        checkGame();
+                    }
                 }
             }
             else{
-                this.className = this.className.replace('show','');
-                list = [];
+                clearItems();
             }
           });
         boxshow.appendChild(box);
     }
+
     //#endregion
 
-    //#region checkMobile
-    // check if youre in mobile view or not (make inital blank screen look better)
-    var intViewportWidth = window.innerWidth;
     
-    if( intViewportWidth <= 767 )
-        main.style.height = "auto";
-    //#endregion
 
-    //#region Resize page
+    // //#region checkMobile
+    // // check if youre in mobile view or not (make inital blank screen look better)
+    // var intViewportWidth = window.innerWidth;
+    
+    // if( intViewportWidth <= 767 )
+    //     main.style.height = "auto";
+    // //#endregion
 
-    var mainHeight = parseInt(window.getComputedStyle(main).height.replace("px",""));
-    var mainWidth = parseInt(window.getComputedStyle(main).width.replace("px",""));
+    // //#region Resize page
 
-    if(intViewportWidth > 767 && mainHeight >= 955){
-        var newHeight = startHeight;
-        var rowCount = (boxesWidth/mainWidth); //numbers of rows created by the boxes
-        while( rowCount > 2){
-            newHeight += height + 246;
-            aside.style.height = newHeight + "px";
-            nav.style.height =  newHeight + "px";
-            --rowCount;
-        }
-    }
-    //#endregion
+    // var mainHeight = parseInt(window.getComputedStyle(main).height.replace("px",""));
+    // var mainWidth = parseInt(window.getComputedStyle(main).width.replace("px",""));
+
+    // if(intViewportWidth > 767 && mainHeight >= 955){
+    //     var newHeight = startHeight;
+    //     var rowCount = (boxesWidth/mainWidth); //numbers of rows created by the boxes
+    //     while( rowCount > 2){
+    //         newHeight += height + 246;
+    //         aside.style.height = newHeight + "px";
+    //         nav.style.height =  newHeight + "px";
+    //         --rowCount;
+    //     }
+    // }
+    // //#endregion
 
 };
 
@@ -95,6 +98,13 @@ var compareValues = function(){
     return false;
 };
 
+var clearItems = function(){
+    for( var i = 0; i < list.length; ++i){
+        list[i].className = list[i].className.replace('show','');
+    } 
+    list = [];
+}
+
 var checkGame = function(){
     if(compareValues()){
         for( var i = 0; i < list.length; ++i){
@@ -102,8 +112,8 @@ var checkGame = function(){
         }   
     }
     else{
-        for( var i = 0; i < list.length; i++){
-            list[i].className = list[i].className.replace('show','');
-        }
+        setTimeout(function(){ //timer delay after 0.5 sec to show the letter.
+            clearItems();
+        }, 500);
     }
 }

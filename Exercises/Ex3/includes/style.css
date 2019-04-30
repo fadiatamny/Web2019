@@ -412,29 +412,7 @@ nav span{
 /*Mobile Querries*/
 /*-----------------------------*/
 
-@media (max-width:2560px){
-  #layout3 main{
-    width: 2000px;
-  }
-}
-
-
-@media (max-width:1920px){
-  #layout3 main{
-    width: 1427px;
-  }
-}
-
-
-@media (max-width:1441px){
-
-  #layout3 main{
-    width: 964px;
-  }
-}
-
-
-@media (max-width:767px){
+@media only screen and (max-width:768px){
     
   #layout3 .main-nav{
     height: 105px;
@@ -455,4 +433,3 @@ nav span{
       height: 955px;
   }
 }
-
