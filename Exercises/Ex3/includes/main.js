@@ -6,13 +6,14 @@ var width = 80;
 var charArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var charPair = '';
 var letters = [];
+var count = 0;
 
 var list = [];
 
 var generateBoxes = function () {
     var random = 0;
 
-    if (charPair === '') {
+    if (count%2 == 0) {
         random = Math.floor(Math.random() * charArray.length);
         letters.push(charArray[random]);
         letters.push(charArray[random]);
@@ -29,6 +30,7 @@ var generateBoxes = function () {
         letters.push(charPair);
     }
 
+    ++count;
     letters = fisherYates(letters);
 
     var i = 0;
@@ -39,8 +41,8 @@ var generateBoxes = function () {
         box.className = 'box';
         random = Math.floor(Math.random() * charArray.length);
         box.innerHTML = '<p style="margin-top: ' + height * 0.25 + 'px; font-size: ' + height * 0.35 + 'px;">' + letters[i] + '</p>';
-        height = height + 20;
-        width = width + 20;
+        height += 20;
+        width += 20;
 
         box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
