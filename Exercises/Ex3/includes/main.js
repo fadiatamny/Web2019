@@ -1,118 +1,123 @@
 var boxshow = document.getElementById('js-boxshow');
-var main = document.getElementById('main');
-var aside = document.getElementById('aside');
-var nav = document.getElementById('nav');
 
 var height = 80;
 var width = 80;
 
-var startHeight = 995; //main height to start with.
-var boxesWidth = 0; // used to track the amount of boxes divided in rows.
-
-//var charArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-var charArray = ['F','A','D','I'];
+var charArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var charPair = '';
+var letters = [];
 
 var list = [];
 
-var generateBoxes = function(){
+var generateBoxes = function () {
+    var random = 0;
 
-    //#region create Element
-    for(var i = 0; i < 3; ++i){
+    if (charPair === '') {
+        random = Math.floor(Math.random() * charArray.length);
+        letters.push(charArray[random]);
+        letters.push(charArray[random]);
+        random = Math.floor(Math.random() * charArray.length);
+        letters.push(charArray[random]);
+        charPair = charArray[random];
+    } else {
+        letters.push(charPair);
+        do {
+            random = Math.floor(Math.random() * charArray.length);
+        } while (charArray[random] === charPair);
+        charPair = charArray[random];
+        letters.push(charPair);
+        letters.push(charPair);
+    }
+
+    letters = fisherYates(letters);
+
+    var i = 0;
+    for (i = 0; i < 3; ++i) {
         box = document.createElement('DIV');
-        box.style.height = height+'px';
-        box.style.width = width+'px';
+        box.style.height = height + 'px';
+        box.style.width = width + 'px';
         box.className = 'box';
-        var random = Math.floor(Math.random()*charArray.length);
-        box.innerHTML= '<p style="margin-top: '+height*0.25+'px; font-size: '+height*0.35+'px;">'+charArray[random]+'</p>';
+        random = Math.floor(Math.random() * charArray.length);
+        box.innerHTML = '<p style="margin-top: ' + height * 0.25 + 'px; font-size: ' + height * 0.35 + 'px;">' + letters[i] + '</p>';
         height = height + 20;
         width = width + 20;
-        boxesWidth += width + 128 ;
-        
-        box.addEventListener('click', function(){
-            if(list.length >= 2){
-                clearItems();
-            }
+        boxesWidth += width + 128;
 
-            if( !this.className.includes('show')){
-                if(!this.className.includes('correct')){
-                    this.className = this.className + ' show';
-                    list.push(this);
-                    if(list.length == 2){
-                        checkGame();
-                    }
-                }
-            }
-            else{
-                clearItems();
-            }
-          });
+        box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
     }
 
-    //#endregion
-
-    
-
-    // //#region checkMobile
-    // // check if youre in mobile view or not (make inital blank screen look better)
-    // var intViewportWidth = window.innerWidth;
-    
-    // if( intViewportWidth <= 767 )
-    //     main.style.height = "auto";
-    // //#endregion
-
-    // //#region Resize page
-
-    // var mainHeight = parseInt(window.getComputedStyle(main).height.replace("px",""));
-    // var mainWidth = parseInt(window.getComputedStyle(main).width.replace("px",""));
-
-    // if(intViewportWidth > 767 && mainHeight >= 955){
-    //     var newHeight = startHeight;
-    //     var rowCount = (boxesWidth/mainWidth); //numbers of rows created by the boxes
-    //     while( rowCount > 2){
-    //         newHeight += height + 246;
-    //         aside.style.height = newHeight + "px";
-    //         nav.style.height =  newHeight + "px";
-    //         --rowCount;
-    //     }
-    // }
-    // //#endregion
-
+    letters = [];
 };
 
-var compareValues = function(){
+var boxClick = function () {
+    if (list.length >= 2) {
+        clearItems();
+    }
 
+    if (!this.className.includes('show')) {
+        if (!this.className.includes('correct')) {
+            this.className = this.className + ' show';
+            list.push(this);
+            if (list.length == 2) {
+                checkGame();
+            }
+        }
+    }
+    else {
+        clearItems();
+    }
+};
+
+//randomize dict
+var fisherYates = function (sourceArray) {
+    var i = 0;
+    for (i = 0; i < sourceArray.length - 1; ++i) {
+        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+        var temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
+    return sourceArray;
+}
+
+var compareValues = function () {
     var str1 = list[0].innerHTML;
     var str2 = list[1].innerHTML;
 
-    var index=str1.indexOf('">');
-    var slashIndex=str1.indexOf('</p');
-    var fstr1=str1.substring(index+2,slashIndex);
+    var index = str1.indexOf('">');
+    var slashIndex = str1.indexOf('</p');
+    var fstr1 = str1.substring(index + 2, slashIndex);
 
-    index=str2.indexOf('">');
-    slashIndex=str2.indexOf('</p');
-    var fstr2=str2.substring(index+2,slashIndex);
+    index = str2.indexOf('">');
+    slashIndex = str2.indexOf('</p');
+    var fstr2 = str2.substring(index + 2, slashIndex);
 
-    if(fstr1 == fstr2)
+    if (fstr1 == fstr2)
         return true;
     return false;
 };
 
-var clearItems = function(){
-    for( var i = 0; i < list.length; ++i){
-        list[i].className = list[i].className.replace('show','');
-    } 
+//clears box dict
+var clearItems = function () {
+    var i = 0;
+    for (i = 0; i < list.length; ++i) {
+        list[i].className = list[i].className.replace('show', '');
+    }
     list = [];
 }
 
-var checkGame = function(){
-    if(compareValues()){
-        for( var i = 0; i < list.length; ++i){
-            list[i].className = list[i].className.replace('show','correct');
-        }   
+//checks game status
+var checkGame = function () {
+    if (compareValues()) {
+        var i = 0;
+        for (i = 0; i < list.length; ++i) {
+            list[i].className = list[i].className.replace('show', 'correct');
+        }
     }
-    else{
-        setTimeout(function(){ //timer delay after 0.5 sec to show the letter.
+    else {
+        setTimeout(function () { //timer delay after 0.5 sec to show the letter.
             clearItems();
         }, 500);
     }

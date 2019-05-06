@@ -349,11 +349,16 @@ nav span{
 /*Layout3*/
 /*-----------------------------*/
 
+#layout3 .main{
+  height: 100%;
+  display: flex;
+}
+
 #layout3 .main-nav{
   float: left;
   background-color: #E5E5E5;
-  width: 372px;
-  height: 100vh;
+  width: 25vw;
+  clear: both;
 }
 
 #layout3 nav{
@@ -362,13 +367,14 @@ nav span{
 
 #layout3 main{
   float: left;
-  width: 964px;
+  width: 67vw;
+  min-height: 100vh;
 }
 
 #layout3 aside{
   float: right;
-  width: 104px;
-  height: 100vh;
+  clear: both;
+  width: 8vw;
   background-color: #18ef214d;
   opacity: 0.3;
 }
@@ -408,9 +414,6 @@ nav span{
   color: #ffffff; 
 }
 
-#layout3 .main{
-  height: 100%;
-}
 /*-----------------------------*/
 /*Mobile Querries*/
 /*-----------------------------*/
@@ -434,11 +437,5 @@ nav span{
   #layout3 main{
       width: 100%;
       min-height: 100vh;
-  }
-}
-
-@media (min-width:769px){
-  #layout3 main{
-    width: 964px;
   }
 }
