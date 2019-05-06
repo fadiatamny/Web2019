@@ -41,7 +41,6 @@ var generateBoxes = function () {
         box.innerHTML = '<p style="margin-top: ' + height * 0.25 + 'px; font-size: ' + height * 0.35 + 'px;">' + letters[i] + '</p>';
         height = height + 20;
         width = width + 20;
-        boxesWidth += width + 128;
 
         box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
