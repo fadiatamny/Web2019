@@ -408,11 +408,14 @@ nav span{
   color: #ffffff; 
 }
 
+#layout3 .main{
+  height: 100%;
+}
 /*-----------------------------*/
 /*Mobile Querries*/
 /*-----------------------------*/
 
-@media only screen and (max-width:768px){
+@media (max-width:768px){
     
   #layout3 .main-nav{
     height: 105px;
@@ -430,6 +433,12 @@ nav span{
 
   #layout3 main{
       width: 100%;
-      height: 955px;
+      min-height: 100vh;
+  }
+}
+
+@media (min-width:769px){
+  #layout3 main{
+    width: 964px;
   }
 }
