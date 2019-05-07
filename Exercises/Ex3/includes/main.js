@@ -13,6 +13,7 @@ var list = [];
 var generateBoxes = function () {
     var random = 0;
 
+    //#region Ranodmizing Characters
     if (count%2 == 0) {
         random = Math.floor(Math.random() * charArray.length);
         letters.push(charArray[random]);
@@ -32,7 +33,9 @@ var generateBoxes = function () {
 
     ++count;
     letters = fisherYates(letters);
+    //#endregion
 
+    //#region Creation loop
     var i = 0;
     for (i = 0; i < 3; ++i) {
         box = document.createElement('DIV');
@@ -47,7 +50,7 @@ var generateBoxes = function () {
         box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
     }
-
+    //#endregion
     letters = [];
 };
 
