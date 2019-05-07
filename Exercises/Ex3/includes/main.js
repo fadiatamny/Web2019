@@ -91,7 +91,7 @@ var fisherYates = function (sourceArray) {
         sourceArray[i] = temp;
     }
     return sourceArray;
-}
+};
 
 var compareValues = function () {
     var str1 = list[0].innerHTML;
