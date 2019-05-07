@@ -54,7 +54,7 @@ footer {
 }
 
 nav {
-  width: 300px;
+  width: 291px;
   height: 33px;
   margin: 40px auto;
 }
@@ -345,6 +345,9 @@ nav span {
 /*-----------------------------*/
 /*Layout3*/
 /*-----------------------------*/
+#layout3 .wrapper{
+  width: auto;
+}
 
 #layout3 .main {
   height: 100%;
@@ -416,6 +419,9 @@ nav span {
 /*-----------------------------*/
 
 @media (max-width: 768px) {
+  #layout3 .main{
+    display: block;
+  }
   #layout3 .main-nav {
     height: 105px;
     width: 100%;

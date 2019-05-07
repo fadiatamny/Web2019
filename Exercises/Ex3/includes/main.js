@@ -10,10 +10,9 @@ var count = 0;
 
 var list = [];
 
-var generateBoxes = function () {
+var generateLetters = function(){
     var random = 0;
 
-    //#region Ranodmizing Characters
     if (count%2 == 0) {
         random = Math.floor(Math.random() * charArray.length);
         letters.push(charArray[random]);
@@ -33,24 +32,32 @@ var generateBoxes = function () {
 
     ++count;
     letters = fisherYates(letters);
-    //#endregion
+};
 
-    //#region Creation loop
+var generateBoxes = function () {
+    var random = 0;
+
+    generateLetters();
+
     var i = 0;
     for (i = 0; i < 3; ++i) {
-        box = document.createElement('DIV');
+        var box = document.createElement('DIV');
         box.style.height = height + 'px';
         box.style.width = width + 'px';
         box.className = 'box';
-        random = Math.floor(Math.random() * charArray.length);
-        box.innerHTML = '<p style="margin-top: ' + height * 0.25 + 'px; font-size: ' + height * 0.35 + 'px;">' + letters[i] + '</p>';
+
+        var p = document.createElement('P');
+        p.style.marginTop = height*0.25+'px';
+        p.style.fontSize = height*0.25+'px';
+        p.innerHTML = letters[i];
+        box.appendChild(p);
+
         height += 20;
         width += 20;
 
         box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
     }
-    //#endregion
     letters = [];
 };
 
@@ -73,7 +80,7 @@ var boxClick = function () {
     }
 };
 
-//randomize dict
+//randomize Array
 var fisherYates = function (sourceArray) {
     var i = 0;
     for (i = 0; i < sourceArray.length - 1; ++i) {
@@ -103,14 +110,14 @@ var compareValues = function () {
     return false;
 };
 
-//clears box dict
+//clears items in Array
 var clearItems = function () {
     var i = 0;
     for (i = 0; i < list.length; ++i) {
         list[i].className = list[i].className.replace('show', '');
     }
     list = [];
-}
+};
 
 //checks game status
 var checkGame = function () {
@@ -125,4 +132,4 @@ var checkGame = function () {
             clearItems();
         }, 500);
     }
-}
+};
