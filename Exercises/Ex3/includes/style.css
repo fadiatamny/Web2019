@@ -357,7 +357,7 @@ nav span {
 #layout3 .main-nav {
   float: left;
   background-color: #e5e5e5;
-  width: 25vw;
+  width: 25.8vw;
   clear: both;
 }
 
@@ -374,7 +374,7 @@ nav span {
 #layout3 aside {
   float: right;
   clear: both;
-  width: 8vw;
+  width: 7.2vw;
   background-color: #18ef214d;
   opacity: 0.3;
 }
@@ -435,7 +435,7 @@ nav span {
   #layout3 aside {
     display: none;
   }
-
+  
   #layout3 main {
     width: 100%;
     min-height: 100vh;
