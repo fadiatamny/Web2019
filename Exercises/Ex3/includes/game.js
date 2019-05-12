@@ -1,7 +1,6 @@
 var boxshow = document.getElementById('js-boxshow');
 
-var height = 80;
-var width = 80;
+var dimensions = 80;
 
 var charArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var charPair = '';
@@ -9,22 +8,29 @@ var letters = [];
 var count = 0;
 
 var list = [];
+var random = 0;
+var i = 0;
 
 var generateLetters = function(){
-    var random = 0;
 
-    if (count%2 == 0) {
-        random = Math.floor(Math.random() * charArray.length);
-        letters.push(charArray[random]);
-        letters.push(charArray[random]);
+    if (count%2 == 0) {  
         random = Math.floor(Math.random() * charArray.length);
         letters.push(charArray[random]);
         charPair = charArray[random];
-    } else {
-        letters.push(charPair);
+
         do {
             random = Math.floor(Math.random() * charArray.length);
-        } while (charArray[random] === charPair);
+        } while (charArray[random] === charPair); // to insure different pairs.
+
+        letters.push(charArray[random]);
+        letters.push(charArray[random]);
+    } else {
+        letters.push(charPair);
+
+        do {
+            random = Math.floor(Math.random() * charArray.length);
+        } while (charArray[random] === charPair); // to insure different pairs.
+
         charPair = charArray[random];
         letters.push(charPair);
         letters.push(charPair);
@@ -35,25 +41,22 @@ var generateLetters = function(){
 };
 
 var generateBoxes = function () {
-    var random = 0;
 
     generateLetters();
 
-    var i = 0;
     for (i = 0; i < 3; ++i) {
         var box = document.createElement('DIV');
-        box.style.height = height + 'px';
-        box.style.width = width + 'px';
+        box.style.height = dimensions + 'px';
+        box.style.width = dimensions + 'px';
         box.className = 'box';
 
         var p = document.createElement('P');
-        p.style.marginTop = height*0.25+'px';
-        p.style.fontSize = height*0.25+'px';
+        p.style.marginTop = dimensions*0.25+'px';
+        p.style.fontSize = dimensions*0.25+'px';
         p.innerHTML = letters[i];
         box.appendChild(p);
 
-        height += 20;
-        width += 20;
+        dimensions += 20;
 
         box.addEventListener('click', boxClick);
         boxshow.appendChild(box);
@@ -82,7 +85,6 @@ var boxClick = function () {
 
 //randomize Array
 var fisherYates = function (sourceArray) {
-    var i = 0;
     for (i = 0; i < sourceArray.length - 1; ++i) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
 
@@ -112,7 +114,6 @@ var compareValues = function () {
 
 //clears items in Array
 var clearItems = function () {
-    var i = 0;
     for (i = 0; i < list.length; ++i) {
         list[i].className = list[i].className.replace('show', '');
     }
@@ -122,7 +123,6 @@ var clearItems = function () {
 //checks game status
 var checkGame = function () {
     if (compareValues()) {
-        var i = 0;
         for (i = 0; i < list.length; ++i) {
             list[i].className = list[i].className.replace('show', 'correct');
         }
