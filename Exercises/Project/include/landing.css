@@ -1,0 +1,228 @@
+/*--------------------------------------*/
+/*Init.*/
+/*--------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    color: #555555;
+    font-family: 'lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*--------------------------------------*/
+/*reusable shit.*/
+/*--------------------------------------*/
+
+section {
+    padding: 80px 0 80px 0;
+}
+
+/*--------------------------------------*/
+/*Headings.*/
+/*--------------------------------------*/
+
+h1, h2  {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 240%;
+    word-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #fc86d3;
+    content: " ";
+    width: 150px;
+    margin: 0 auto 0 auto;
+    margin-top: 20px;
+}
+
+
+
+/*--------------------------------------*/
+/*Buttons.*/
+/*--------------------------------------*/
+
+.button:link,
+.button:visited {
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #ffffff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+    background-color: #FDA7DF;
+    border: 1px solid #FDA7DF;
+}
+
+.button:hover,
+.button:active{
+    background-color: #fc86d3;
+}
+
+/*--------------------------------------*/
+/*Header.*/
+/*--------------------------------------*/
+
+header {
+    background-image: linear-gradient(#8383836b,#00000069), url(../images/backgroundplus.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.slogan-text-box {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.logo, .blacklogo {
+    height: 100px;
+    width: auto;
+    float: left;
+}
+
+.blacklogo {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+}
+
+.nav-item{
+    margin-left: 25px;
+}
+
+.nav-link{
+    opacity: 0.7 !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 300;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    opacity: 1 !important;
+    border-bottom: 2px solid #fc86d3 !important;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fed9f1;
+    z-index: 999;
+}
+
+.sticky .slogan-text-box {
+    display: none;
+}
+
+
+.sticky .nav-link{
+    color: #000000 !important;
+}
+
+.sticky .nav-link:hover,
+.sticky .nav-link:active {
+    opacity: 1 !important;
+    border-bottom: 2px solid #fc86d3 !important;
+}
+
+.sticky .logo { display:none; }
+.sticky .blacklogo{ display: block; }
+/*--------------------------------------*/
+/*Cat pictures.*/
+/*--------------------------------------*/
+
+.pics-features .row{
+    margin: 30px auto 0px;
+}
+
+.pics-showcase {
+    list-style-type: none;
+    width: 100%;
+}
+
+.pics-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.cat-pic {
+    width: 100%;
+    margin: 0 !important;
+    overflow: hidden;
+    background: #000000;
+}
+
+.cat-pic img {
+    opacity: 0.7;
+    width: 100%;
+    margin: 0;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.cat-pic img:hover {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+
+/*--------------------------------------*/
+/*Footer.*/
+/*--------------------------------------*/
+
+footer {
+    background-color: #272727;
+    color: #686868;
+}
+
+
+@media (max-width: 500px){
+    .cat-pic{
+        width:78vw;
+    }
+    .col{
+        padding-left: 4.6vw;
+        padding-right: 4.6vw;
+    }
+}
