@@ -1,12 +1,13 @@
 <?php
-function OwO($tittle){
+
+function printHead($title){
 echo '<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-        <title>'.$tittle.'</title>
+        <title>'.$title.'</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 

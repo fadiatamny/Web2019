@@ -1,0 +1,28 @@
+
+label{
+    font-family: 'lato', 'Arial', sans-serif;
+    color: #555555;
+}
+main{
+    margin-top: 10vh;
+}
+.wrapper{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.tempRight{
+    float: right;
+}
+
+.form-check-inline{
+    padding-top: 10px;
+}
+
+.btDiv{
+    margin-top: 10vh;
+}
+
+.pos{
+    text-align:center;
+}

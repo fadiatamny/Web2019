@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./includes/style.css">
+    <title>Login form</title>
+</head>
+
+<body>
+    <main>
+        <div class="container loginForm">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="text-center">
+                        <form class="form-signin" action="./backend/server.php" method="GET">
+                            <div class="form-group row ">
+                                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                            </div>
+
+                            <div class="form-group row ">
+
+                                <label>User Name</label>
+
+                                <input type="text" name="inputUser" pattern="(?=.*?[A-Za-z]).+" class="form-control" placeholder="User Name"
+                                    required autofocus title="Must include 1 letter and 1 digit">
+                            </div>
+
+                            <div class="form-group row ">
+
+                                <label>Password</label>
+                                <input type="password" name="inputPassword" class="form-control" placeholder="Password"
+                                    required> </div>
+
+                            <div class="form-group row ">
+
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

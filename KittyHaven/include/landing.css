@@ -218,12 +218,8 @@ footer {
 
 
 @media (max-width: 500px){
-    
-    h1,h2{
-        font-size: 150%;
-    }
     .cat-pic{
-        width:84vw;
+        width:78vw;
     }
     .col{
         padding-left: 4.6vw;
