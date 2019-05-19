@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-4">
             <div class="text-center">
-                <form class="form-signin" method="POST " action="/backend/login.php">
+                <form class="form-signin" method="POST " action="./backend/login.php">
                     <img class="mb-4" src="images/blacklogo.png" alt="" width="72" height="72">
                     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                     <label for="inputEmail" class="sr-only">Email address</label>

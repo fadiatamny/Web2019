@@ -6,3 +6,6 @@ if(isset($_POST))  {
     //header("Location: /user.php");
     //die();
 }
+
+//redirect after few seconds with error
+?>
