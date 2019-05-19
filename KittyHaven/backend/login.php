@@ -1,10 +1,16 @@
 <?php
 if(isset($_POST))  {
-    var_dump($_POST);
-    //LOGIN stuff
-    //setsession('login = true'); // other shit
-    //header("Location: /user.php");
-    //die();
+    if(strtolower($_POST['inputUser']) == 'admin'){
+        if($_POST['inputPassword'] == 'root'){
+            //correct login do something
+        }else{
+            echo "<h1> ERROR INCORRECT LOGIN OF ADMIN PLEASE TRY AGAIN!";
+        }
+    }else{
+        //setsession('login = true'); // other shit
+        header("Location: ../pages/user.php");
+        die();
+    }
 }
 
 //redirect after few seconds with error

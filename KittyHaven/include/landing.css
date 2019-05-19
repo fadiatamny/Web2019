@@ -82,6 +82,7 @@ h2:after {
 .button:hover,
 .button:active{
     background-color: #fc86d3;
+    border: 1px solid #fc86d3;
 }
 
 /*--------------------------------------*/
