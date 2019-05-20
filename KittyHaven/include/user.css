@@ -1,0 +1,62 @@
+
+.userHeader{
+    margin-top: 10vh;
+}
+
+.borderLine{
+    width: 40vw;
+    margin: 5vh auto;
+    height: 2px;
+    background: #fc86d3;
+}
+
+.kittyPic{
+    height:15vh;
+    border-radius: 15px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.text{
+    padding-top: 2vh;
+}
+
+.navList{
+    height:100%;
+    background: #fc86d3;
+    width: 2px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+}
+
+.list-group-item.active {
+    background-color: #FDA7DF;
+    border-color: #FDA7DF;
+    opacity:0.3;
+}
+
+
+#data{
+    min-height: 40vh;
+}
+
+@media (max-width:425px){
+    .navList{
+        margin: 5vh auto;
+        width:100%;
+        height: 2px;
+    }
+    .borderLine{
+        width:90%;
+    }
+}

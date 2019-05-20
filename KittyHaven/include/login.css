@@ -1,3 +1,8 @@
+.loginForm{
+    margin-top: 15vh;
+    height: 80vh;
+}
+
 .btn-primary{
     transition: background-color 0.2s, border 0.2s, color 0.2s; 
     background-color: #FDA7DF;

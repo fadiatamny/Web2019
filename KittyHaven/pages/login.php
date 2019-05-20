@@ -1,5 +1,5 @@
 <?php require_once('../templates/head.php'); printHead('Login',['login.css']);?>
-<?php require_once('../templates/navbar.php'); ?>
+<?php require_once('../templates/navbar.php'); printNav('')?>
 <div class="container loginForm">
     <div class="row justify-content-center">
         <div class="col-4">
@@ -22,4 +22,4 @@
         </div>
     </div>
 </div>
-<?php require_once('../templates/footer.php'); ?>
+<?php require_once('../templates/footer.php'); printFooter('')?>
