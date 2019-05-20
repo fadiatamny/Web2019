@@ -40,14 +40,25 @@ footer{
 }
 
 .list-group-item.active {
-    background-color: #FDA7DF;
-    border-color: #FDA7DF;
-    opacity:0.3;
+    background-color: #fed3ef ;
+    border-color: #fed3ef ;
+    color: #666666;
 }
 
 
 #data{
     min-height: 40vh;
+}
+
+.list-group-item{
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    border-top: 1px 1px solid #00000020;
+}
+
+.first{
+    border: none;
 }
 
 @media (max-width:425px){
