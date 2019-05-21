@@ -1,2 +1,2 @@
 <h1>McFluffings</h1>
-<p> some random text of data idk wtf it is tbh </p>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit mauris in erat facilisis, id pretium eros ultricies. Fusce ut luctus tellus. Duis vitae dolor urna. Phasellus posuere ligula at felis vestibulum fermentum. Suspendisse pellentesque posuere eros, laoreet scelerisque eros efficitur vel. Quisque porta semper augue id faucibus. Nulla eleifend felis quis ante pulvinar porttitor.</p>
