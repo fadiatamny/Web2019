@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.background{
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+.gradient{
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #000000a6, #0000007e);
+}
+
+.terminalcolor{
+    padding-top: 10px;
+    padding-left: 15px;
+    background: #0000003a;
+    border-bottom: 1px solid #00000048;
+    color: #fff;
+    height: 5vh;
+}
+
+.item {
+    width: 80vw;
+    height: 80vh;
+    margin: 5vh auto;
+    padding-top: 75px;
+    background: #00000071;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+  }
+
+.hidden{
+    display: none;
+}  
+
+  .typewriter h1 {
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3s steps(120, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+  }
+
+  .item.box.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+            transition: opacity 600ms, visibility 600ms;
+}
+
+.item.box{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid greenyellow;
+    outline: none;
+    color: #f5deb3;
+}
+
+.wrapper{
+    margin-top: 5%;
+}
+
+#dock-container {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    right: 33%;
+    left: 33%;
+    width: 34%;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px 10px 0 0;
+    height: 50px;
+}
+#dock-container li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+}
+
+#dock-container li:first-child {
+    margin-left: 0px;
+}
+
+.icon:hover {
+    transform: scale(2);
+}
+
+.icon {
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 1s;
+    transform-origin: 50% 100%;
+}
+
+#firstBox{
+    padding-top: 22vh;
+}
+
+#firstResponse h1,
+#secondBox h1,
+#thirdBox h1,
+#forthBox h1{
+    font-size: 20px;
+}
+
+.var{
+    color: #5fdfff;
+}
+
+#firstResponse .par3{
+    margin-top: 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
