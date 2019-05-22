@@ -10,7 +10,7 @@ var showElem = function(index){
     switch(index){
         case 2:
                 $('#firstBox .par1').removeClass('hidden');
-                setTimeout(function(){$('#password').removeClass('hidden'); $('#password').focus();},1180);
+                setTimeout(function(){$('#password').removeClass('hidden'); $('#password').focus();},5000);
             break;
         case 3:
                 cleanShown();
@@ -119,3 +119,7 @@ var submit = function(){
     window.location.replace("./backend/terminal.php?user="+user+"&password="+pass+"&secret="+secret+"&victim="+vname);
 };
 
+(function () {
+    shape = document.getElementsByClassName("svgBG")[0];
+    shape.setAttribute("viewBox", "0 0 "+$(window).width()+" "+$(window).height()); 
+})();

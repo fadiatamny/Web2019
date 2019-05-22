@@ -14,7 +14,7 @@
 
 <body>
     <div class="background">
-        <svg viewBox='0 0 1600 900'>
+        <svg viewBox='0 0 1440 831' class="svgBG">
             <rect fill='#ff7700' width='100vw' height='100vh' />
             <polygon fill='#cc0000' points='957 450 539 900 1396 900' />
             <polygon fill='#aa0000' points='957 450 872.9 900 1396 900' />
