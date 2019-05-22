@@ -10,7 +10,7 @@ var showElem = function(index){
     switch(index){
         case 2:
                 $('#firstBox .par1').removeClass('hidden');
-                setTimeout(function(){$('#password').removeClass('hidden'); $('#password').focus();},5000);
+                setTimeout(function(){$('#password').removeClass('hidden'); $('#password').focus();},1800);
             break;
         case 3:
                 cleanShown();
