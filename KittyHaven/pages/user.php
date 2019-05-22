@@ -49,4 +49,4 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
 </div>
 
 <?php require_once('../templates/footer.php');
-printFooter(['main.js']) ?>
+printFooter(['user.js']) ?>

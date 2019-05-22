@@ -103,17 +103,24 @@ header {
     left: 15%;
 }
 
-.logo, .blacklogo {
-    height: 100px;
-    width: auto;
+#logo{
+    background: url(../images/logo.png) no-repeat left;
+    background-size: contain;
+    height: 100px ;
+    width: 100px;
     float: left;
 }
 
-.blacklogo {
-    display: none;
+#blacklogo{
+    background: url(../images/blacklogo.png) no-repeat left;
+    background-size: contain;
     height: 50px;
-    width: auto;
+    width: 50px;
     float: left;
+}
+
+.hide{
+    display: none;
 }
 
 .nav-item{

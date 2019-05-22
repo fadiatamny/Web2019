@@ -48,16 +48,11 @@ footer{
 /*inits*/
 /*-----------------------------*/
 
-.logo, .blacklogo {
-    height: 100px;
-    width: auto;
-    float: left;
-}
-
-.blacklogo {
-    display: none;
+#blacklogo{
+    background: url(../images/blacklogo.png) no-repeat left;
+    background-size: contain;
     height: 50px;
-    width: auto;
+    width: 50px;
     float: left;
 }
 
@@ -108,6 +103,7 @@ footer{
 .sticky .blacklogo{ display: block; }
 
 footer {
+    position: fixed;
     background-color: #272727;
     color: #686868;
     bottom: 0px;
@@ -119,7 +115,7 @@ main{
 
 footer p{
     margin: 0;
-    padding: 10px;
+    margin: 10px;
 }
 
 /*-----------------------------*/
@@ -182,3 +178,15 @@ textarea:focus{
 }
 
 
+.borderLine{
+    width: 600px;
+    margin: 5vh auto;
+    height: 2px;
+    background: #fc86d3;
+}
+
+@media (max-width:768px){
+    .borderLine{
+        width:90%;
+    }
+}

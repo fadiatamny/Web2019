@@ -120,6 +120,20 @@ var submit = function(){
 };
 
 (function () {
-    shape = document.getElementsByClassName("svgBG")[0];
-    shape.setAttribute("viewBox", "0 0 "+$(window).width()+" "+$(window).height()); 
+    var width = $(window).width();
+    var height = $(window).height();
+
+    if(width<=1024){
+        shape = document.getElementsByClassName("svgBG")[0];
+        shape.setAttribute("viewBox", "0 0 "+width+" "+height);
+        $('#firstResponse h1,#secondBox h1,#thirdBox h1,#forthBox h1').css('font-size', '15px');
+        $('#firstBox .h1, #firstBox h1').css('font-size', '1.5rem');
+        $('#firstbox .par3 div').css('margin-left','25vw');
+    }else{
+        $('.item').css('height','83vh');
+    }
+    if(width <= 500){
+        $('#firstResponse h1,#secondBox h1,#thirdBox h1,#forthBox h1').css('font-size', '8px');
+        $('#firstbox .par3 div').css('margin-left','22vw');
+    }
 })();

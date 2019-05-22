@@ -1,0 +1,99 @@
+.catCard {
+    width: 100%;
+    margin: 0 ;
+    overflow: hidden;
+    background: #000000;
+    border: none;
+}
+
+.catCard img {
+    opacity: 0.7;
+    width: 100%;
+    margin: 0;
+    transform: scale(1);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.catDescriptionWrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fc86d3b9;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity .2s, visibility .2s;
+}
+
+.catWrap:hover .catDescriptionWrap {
+    visibility: visible;
+    opacity: 1;
+}
+
+.catWrap:hover img {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.catDescription {
+    transition: .2s;
+    transform: translateY(1em);
+}
+
+.catWrap:hover .catDescription {
+    transform: translateY(0);
+}
+
+.header{
+    height: 10vh;
+    margin-top: 5vh;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header h1{
+    float: left;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ff60c7;
+}
+
+.addBtn{
+    float: right;
+    color: #FDA7DF;
+    border: 1px solid #FBBBE4;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 25px;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.addBtn:hover{
+    color: #fc92d7;
+    border-color: #ff8fd6;
+    text-decoration: none;
+}
+
+.borderLine{
+    margin-top: 1vh;
+    margin-bottom: 10vh;
+}
+
+.catForm .label{
+    margin-bottom: 10px;
+}
+
+.catForm{
+    margin-top: 10vh;
+}

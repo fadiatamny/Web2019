@@ -5,10 +5,13 @@ $(document).ready(function() {
         if (direction == "down") {
             $('nav').addClass('sticky');
             $('nav').addClass('animated fadeIn');
-
+            $('#logo').addClass('hide');
+            $('#blacklogo').removeClass('hide');
         } else {
             $('nav').removeClass('animated fadeIn');
             $('nav').removeClass('sticky');
+            $('#logo').removeClass('hide');
+            $('#blacklogo').addClass('hide');
         }
     }, {
       offset: '0px;'

@@ -52,7 +52,7 @@
         </div>
         <div class="typewriter wrapper par3 hidden">
             <h1>
-                <div style="width:250px;height:150px; padding-bottom: 10vh; margin-left: 22vw;"><iframe src="https://giphy.com/embed/MDJ9IbxxvDUQM" width="250px" height="150px" style="position:absolute; top:40vh;" frameBorder="0" class="giphy-embed" ></iframe></div>
+                <div style="width:250px;height:150px; padding-bottom: 10vh; margin-left: 30vw;"><iframe src="https://giphy.com/embed/MDJ9IbxxvDUQM" width="250px" height="150px" frameBorder="0" class="giphy-embed" ></iframe></div>
             </h1>
         </div>
         <div class="typewriter wrapper par4 hidden">

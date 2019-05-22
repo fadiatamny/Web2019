@@ -11,11 +11,6 @@
                     <input type="text" name="inputUser" class="form-control loginBox" placeholder="User Name" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
                     <input type="password" name="inputPassword" class="form-control loginBox" placeholder="Password" required>
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                 </form>
             </div>

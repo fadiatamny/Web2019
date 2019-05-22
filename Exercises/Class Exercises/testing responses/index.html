@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        function ajax_post() {
+            document.getElementById("status").innerHTML = "processing...";
+            console.log($("#userName").val());
+            $.post("./server.php", { username: $("#userName").val() }, function (data) {
+                $("#status").html(data);
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Ajax Post to PHP and Get Return Data</h2>
+    Username: <input id="userName" name="userName" type="text"> <br><br>
+    <input name="myBtn" type="submit" value="Check" onclick="ajax_post()"> <br><br>
+    <div id="status"></div>
+</body>
+
+</html>

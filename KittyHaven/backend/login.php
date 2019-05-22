@@ -2,7 +2,8 @@
 if(isset($_POST))  {
     if(strtolower($_POST['inputUser']) == 'admin'){
         if($_POST['inputPassword'] == 'root'){
-            //correct login do something
+            header("Location: ../pages/admin.php");
+            die();
         }else{
             echo "<h1> ERROR INCORRECT LOGIN OF ADMIN PLEASE TRY AGAIN!";
         }
