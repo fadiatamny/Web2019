@@ -152,3 +152,131 @@ input{
 a:hover{
     text-decoration: none;
 }
+
+.logo_svg{
+    height: 50px;
+    bottom: 25%;
+    left: 30%;
+    position: absolute;
+  }
+  #the_logo {
+    z-index: 10;
+  }
+  #the_logo2 {
+    z-index: 5;
+    transform-origin: 25px 28px;
+  }
+  
+  .svgh1, .svgh2, .svgh3, .logo_svg polygon, #the_logo2 {
+    opacity:0;
+  }
+  #the_logo2 polygon{
+    opacity:1;
+  }
+  
+  .svgh3{
+      animation: logo-svg1  4s  ease infinite;
+  }
+  .svgh2{
+      animation: logo-svg2  4s  ease infinite;
+  }
+  .svgh1{
+      animation: logo-svg3  4s  ease infinite;
+  }
+  .hbg{
+      animation: logo-svg4  4s  ease infinite;
+  }
+  
+  #the_logo2{
+      animation: logo-svg5  4s  ease infinite;
+  }
+  
+  
+  @keyframes logo-svg1 {
+    0% {
+      opacity:0;
+    }
+    10%{
+      opacity:1;
+    }
+    90%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+  }
+  
+  @keyframes logo-svg2 {
+    0% {
+      opacity:0;
+    }
+    5%{
+      opacity:0;
+    }
+    15%{
+      opacity:1;
+    }
+    90%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+  }
+  
+  @keyframes logo-svg3 {
+    0% {
+      opacity:0;
+    }
+    10%{
+      opacity:0;
+    }
+    20%{
+      opacity:1;
+    }
+    90%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+  }
+  
+  @keyframes logo-svg4 {
+    0% {
+      opacity:0;
+    }
+    15%{
+      opacity:0;
+    }
+    25%{
+      opacity:1;
+    }
+    90%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+  }
+  
+  @keyframes logo-svg5 {
+    0% {
+      opacity:0;
+    }
+    50%{
+      opacity:0;
+    }
+    51%{
+      opacity:1;
+      transform: scale(1.0);
+    }
+    60%{
+      opacity:0;
+      transform: scale(1.6);
+    }
+    100%{
+      opacity:0;
+    }
+  }

@@ -49,7 +49,9 @@ var showElem = function(index){
                 setTimeout(function(){$('#forthBox .par3').removeClass('hidden');},x*2);
                 setTimeout(function(){$('#forthBox .par4').removeClass('hidden');},x*3);
                 setTimeout(function(){$('#forthBox .par5').removeClass('hidden');},x*3.5);
-                setTimeout(function(){$('#forthBox .par6').removeClass('hidden');},x*7);
+                setTimeout(function(){$('#forthBox .par6').removeClass('hidden');},x*3.5);
+                setTimeout(function(){$('#loading').addClass('hidden'); $('#forthBox .par7').removeClass('hidden');},x*7);
+
                 shown.push(elm);
             break;
     }
