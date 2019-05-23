@@ -113,16 +113,108 @@ a{
 margin: 10px 0  0 0 !important;
 }
 
+/*-----------------------------*/
+/*Memories*/
+/*-----------------------------*/
 
+.memoryInfo{
+    width:50%;
+}
+
+.pagesPictures{
+    position: absolute;
+    bottom:0;
+    width: 40%;
+    padding-top:10vh;
+}
+
+.pagesPictures img{
+    margin: 5px;
+    width: 25%;
+    float: left;
+    height: 80px;
+}
+
+.pagesPictures img:hover{
+    transform: scale(1.05);
+}
+
+#memoryImg{
+    position: absolute;
+    top:0;
+    right:0;
+    width:350px;
+    height:350px;
+    object-fit: fill;
+}
+
+.pagesPictures{
+    float: left;
+}
 
 /*-----------------------------*/
 /*Querries*/
 /*-----------------------------*/
 
-@media (max-width:768px){
+
+
+@media (max-width:767px){
     .navList{
         margin: 5vh auto;
         width: 100%;
         height: 2px;
     }
+    
+    .navSeperator{
+        width:100%;
+    }
+
+    .pagesPictures{
+        position: relative;
+        width: 100%;
+        margin: 0 5%;
+        padding:0;
+    }
+    
+    .pagesPictures img{
+        width: 28%;
+    }
+    
+    #memoryImg{
+        position: relative;
+        width:100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    .memoryInfo{
+        width: 50%;
+    }
+    .pagesPictures{
+        position: absolute;
+        right:0;
+        top:0;
+        width: 15%;
+        padding-top:0;
+    }
+    
+    .pagesPictures img{
+        width: 80px;
+    }
+    
+    .pagesPictures img:hover{
+        transform: scale(1.05);
+    }
+    
+    #memoryImg{
+        position: relative;
+        float:left;
+        width:80%;
+        margin-bottom: 50px;
+    }
+
+    .pagesPictures:last-child{
+        margin-bottom: 50px;
+    }
+
 }

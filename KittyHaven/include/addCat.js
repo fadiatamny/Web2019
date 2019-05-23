@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
     $('.deleteBtn').click(function(){
         sessionStorage.setItem('cat','delete');
-        window.location.replace("./feedback.php?feedback=Deleted&loc=admin"); 
+        window.location.replace("./feedback.php?feedback=Deleted&loc=admin&pic=https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png"); 
     });
 
     if(sessionStorage.getItem("cat") !== null){    

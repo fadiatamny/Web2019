@@ -34,7 +34,6 @@ $(document).ready(function(){
             cats = JSON.parse(sessionStorage.getItem('cats'));
             if(cats === null)
                 cats = data;
-
             if(sessionStorage.getItem("cat") != 'delete')
                 cats.push(JSON.parse(sessionStorage.getItem('cat')));
     
@@ -45,6 +44,7 @@ $(document).ready(function(){
         }else{
             initCats(data);
         }
+        console.log(cats);
     });
 });
 

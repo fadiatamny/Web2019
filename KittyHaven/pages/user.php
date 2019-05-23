@@ -24,23 +24,20 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
         </div>
     </div>
     <div class="row">
-        <div class="col-12" id="nav">
+        <div class="col-md-2" id="nav">
             <div class="list-group list-inline" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action active first" id="list-overview-list" data-toggle="list" href="#list-overview" role="tab" aria-controls="overview">Overview</a>
                 <a class="list-group-item list-group-item-action" id="list-events-list" data-toggle="list" href="#list-events" role="tab" aria-controls="events">Events</a>
                 <a class="list-group-item list-group-item-action" id="list-memories-list" data-toggle="list" href="#list-memories" role="tab" aria-controls="memories">Memories</a>
             </div>
         </div>
-        <div class="col-12" id="navSeperator">
+        <div class="col-md-1" id="navSeperator">
             <div class="navList"></div>
         </div>
-        <div class="col-12" id="data">
+        <div class="col-md" id="data">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-overview" role="tabpanel" aria-labelledby="list-overview-list"><?php require_once('../pages/overview.php'); ?></div>
-                <!-- CHANGED NAME TO EVENTS? ? -->
                 <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list"><?php require_once('../pages/events.php'); ?></div>
-                <!-- REMOVE THE UPDATE AND MAKE IT A LIGHTBOX IN THE EVENTS TAB INSTEAD ? -->
-                <div class="tab-pane fade" id="list-update" role="tabpanel" aria-labelledby="list-update-list"><?php require_once('../pages/update.php'); ?></div>
                 <div class="tab-pane fade" id="list-memories" role="tabpanel" aria-labelledby="list-memories-list"><?php require_once('../pages/memories.php'); ?></div>
             </div>
         </div>
