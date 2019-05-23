@@ -74,7 +74,6 @@ var initCats = function(data){
 
 var lightBoxShow = function(cat){
     selectedCat = cat;
-    console.log(cat);
     $('.catNameModal').html(cat.Name);
     $('.catDescriptionModal').html(cat.Description);
     $('.modalCatPic').attr('src',cat.Url);

@@ -11,14 +11,14 @@ function baseFooter()
     
     <script> 
         var redirect=function(){
-            if(localStorage.getItem("login")=="admin") window.location.replace("./admin.php"); 
-            if(localStorage.getItem("login")=="user")window.location.replace("./user.php");
-            else window.location.replace("../index.html");
-        }
+            if(localStorage.getItem("login")=="admin") {window.location.replace("./admin.php"); return;}
+            if(localStorage.getItem("login")=="user") {window.location.replace("./user.php"); return;}
+            window.location.replace("../index.html");
+        };
         var logOut = function(){
             localStorage.clear();
             window.location.replace("../index.html");
-        }
+        };
     </script>
         
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

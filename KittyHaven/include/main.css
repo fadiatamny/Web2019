@@ -185,6 +185,17 @@ textarea:focus{
     background: #fc86d3;
 }
 
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    position: absolute;
+}
+
 @media (max-width:768px){
     .borderLine{
         width:90%;
