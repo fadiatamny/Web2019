@@ -53,7 +53,7 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
         <div class="controls">
             <div class="form-group row justify-content-center btns">
                 <a href="#" class="btn btn-primary submitBtn">Submit</a>
-                <a href="#" class="btn btn-primary deleteBtn">Delete</a>
+                <a href="#" class="btn btn-primary deleteBtn hide">Delete</a>
                 <a href="#" class="btn btn-primary cancelBtn">Cancel</a>
             </div>
             <div class="form-group row justify-content-center">

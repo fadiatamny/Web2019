@@ -1,4 +1,8 @@
 (function(){
+    var login = localStorage.getItem('login');
+    if(localStorage.getItem('login') == 'admin'){
+        window.location.replace("./admin.php");
+    } 
     if ($(window).width() > 768) {
         $('#navSeperator').addClass('col-1');
         $('#data').addClass('col-9');

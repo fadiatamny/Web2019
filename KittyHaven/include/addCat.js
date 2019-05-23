@@ -9,8 +9,9 @@ $(document).ready(function(){
     });
     $('.deleteBtn').click(function(){
         sessionStorage.setItem('cat','delete');
-        window.location.replace("./feedback.php?feedback=Deleted");
+        window.location.replace("./feedback.php?feedback=Deleted&loc=admin"); 
     });
+
     if(sessionStorage.getItem("cat") !== null){    
         cat = JSON.parse(sessionStorage.getItem("cat"));
         console.log(cat);
@@ -25,8 +26,10 @@ $(document).ready(function(){
         }
         $('#url').val(cat.Url);
         $('#description').val(cat.Description);
+        $('.deleteBtn').removeClass('hide');
     }
 });
+
 
 var clearForm = function(){
     $('#name').val('');
@@ -62,5 +65,5 @@ var response = function(){
     $('.errorTxt').css('display','none');
     sessionStorage.setItem('cat',JSON.stringify(cat));
 
-    window.location.replace("./feedback.php?feedback=Success");
+    window.location.replace("./feedback.php?feedback=Success&loc=admin&pic=https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png");
 };

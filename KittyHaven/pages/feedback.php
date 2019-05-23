@@ -1,17 +1,24 @@
 <?php require_once('../templates/head.php');
 printHead("KitKatt's Profile", ['admin.css']); ?>
 <?php require_once('../templates/navbar.php');
-printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png') ?>
+$pic = $_GET['pic'];
+if($pic == "''" || $pic == null)
+    printNav('');
+else
+    printNav($pic);
+?>
 <?php
 $data = $_GET['feedback'];
-echo '<div class="sucessText">
-    <h1> '.$data.' ! </h1>
-    <h2> Redirecting in 3 seconds ... </h2>
+$location = $_GET['loc'];
+echo '<div class="container" style="margin-top:30vh;">
+    <div class="row justify-content-center"> <h1> '.$data.' ! </h1></div>
+    <div class="row justify-content-center"> <h2> Redirecting in 3 seconds ... </h2> </div>
 </div>
 
 <script>
     setTimeout(function(){
-        window.location.replace("./admin.php");
+        localStorage.setItem("login","'.$location.'");
+        window.location.replace("./'.$location.'.php");
     },3000);
 </script>';
 ?>

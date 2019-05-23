@@ -2,17 +2,15 @@
 if(isset($_POST))  {
     if(strtolower($_POST['inputUser']) == 'admin'){
         if($_POST['inputPassword'] == 'root'){
-            header("Location: ../pages/admin.php");
+            header("Location: ../pages/feedback.php?feedback=Success&loc=admin&pic=''");
             die();
         }else{
-            echo "<h1> ERROR INCORRECT LOGIN OF ADMIN PLEASE TRY AGAIN!";
+            header("Location: ../pages/feedback.php?feedback=Incorrect Admin Login Please Retry&loc=login&pic=''");
+            die();
         }
     }else{
-        //setsession('login = true'); // other shit
-        header("Location: ../pages/user.php");
+        header("Location: ../pages/feedback.php?feedback=Success&loc=user&pic=''");
         die();
     }
 }
-
-//redirect after few seconds with error
 ?>

@@ -2,7 +2,7 @@
 function baseNav()
 {
   echo '<nav class="mb-1 navbar navbar-expand-lg navbar-dark secondary-color lighten-1 sticky sticky-top">  
-  <a href="../index.html" id="blacklogo"></a>
+  <a href="#" id="blacklogo" onclick="redirect()"></a>
   ';
 }
 function printNav($userPic)
@@ -19,7 +19,7 @@ function printNav($userPic)
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
           aria-labelledby="navbarDropdownMenuLink-55">
-          <a class="dropdown-item" href="../index.html">Log out</a>
+          <a class="dropdown-item" href="#" onclick="logOut()">Log out</a>
         </div>
       </li>
     </ul>

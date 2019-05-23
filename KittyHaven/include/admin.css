@@ -33,7 +33,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 15px;
+    overflow: hidden;
     transition: opacity .2s, visibility .2s;
 }
 
@@ -75,6 +76,25 @@
     margin-left: 10vw;
 }
 
+.container.header{
+    height: auto;
+    margin-top: 5vh;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container.header h1{
+    float: none;
+    padding-top: 10px;
+    font-size: 50px;
+    padding-bottom: 10px;
+    border-bottom: none;
+    margin-left: 0;
+}
+.container.header p{
+    font-size: 20px;
+}
+
 .addBtn{
     float: right;
     color: #FDA7DF;
@@ -87,7 +107,6 @@
     transition: color 0.2s, border-color 0.2s;
     margin-right: 10vw;
 }
-
 .addBtn:hover{
     color: #fc92d7;
     border-color: #ff8fd6;
@@ -111,12 +130,6 @@
     margin-left: 15px;
 }
 
-.sucessText{
-    position: absolute;
-    top: 40%;
-    left: 40%;
-}
-
 .errorTxt{
     color: #f32121;
     font-weight: bold;
@@ -136,10 +149,52 @@
     margin-bottom: 50px;
 }
 
+.logoPic,
+.catPic,
+.modalCatPic{
+    height: 30vh;
+    width: 30vh;
+    object-fit: fill;
+}
+.thankYou,
+.catName,
+.catNameModal{
+    margin-top: 5vh;   
+}
+.letter,
+.catDescription,
+.catDescriptionModal{
+    margin-top: 20px;
+    padding-right: 40px;
+}
+
+.catDetails{
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.personalDataForm.wrapper{
+    width: 40vw;
+}
+
+.personalDataForm .logoPic{
+    float:right;
+}
+
+.personalDataForm .buttons{
+    float:right;
+}
 @media(max-width:768px) and (min-width:500px)
 {
     .catPicContainer img,
     .catPicContainer:hover img  {
         height: 150px;
+    }
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 50vw;
+    margin: 1.75rem auto;
     }
 }
