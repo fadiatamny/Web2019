@@ -2,7 +2,7 @@
 <?php require_once('../templates/navbar.php'); printNav('')?>
 <div class="container loginForm">
     <div class="row justify-content-center">
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="text-center">
                 <form class="form-signin" method="POST" action="../backend/login.php">
                     <img class="mb-4" src="../images/blacklogo.png" alt="" width="72" height="72">

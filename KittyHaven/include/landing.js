@@ -1,4 +1,21 @@
 $(document).ready(function() {
+    $.getJSON("./data/cats.json",function(data){
+        var count = 0;
+        var rows = [];
+        for (var obj of data) {
+            if(count == 8)
+                break;
+            var row;
+            if (count % 4 == 0 || count == 0) {
+                row = $('<div class="row justify-content-center"></div>');
+                rows.push(row);
+            }
+            var col = $('<div class=" col-md catPicContainer"><img src="'+ obj.Url +'"/></div></div>');
+            row.append(col);
+            count++;
+        }
+        $('#catsList').append(rows);
+    });
 
     //navi show.
     $('.pics-features').waypoint(function(direction) {
@@ -31,6 +48,8 @@ $(document).ready(function() {
             }
         }
         });
+
+    
     });
 
     //btn scroll on click

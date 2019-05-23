@@ -61,7 +61,6 @@ h2:after {
 }
 
 
-
 /*--------------------------------------*/
 /*Buttons.*/
 /*--------------------------------------*/
@@ -119,10 +118,6 @@ header {
     float: left;
 }
 
-.hide{
-    display: none;
-}
-
 .nav-item{
     margin-left: 25px;
 }
@@ -176,44 +171,41 @@ header {
 /*Cat pictures.*/
 /*--------------------------------------*/
 
-.pics-features .row{
-    margin: 30px auto 0px;
-}
-
-.pics-showcase {
-    list-style-type: none;
+.catPicContainer {
     width: 100%;
-}
-
-.pics-showcase li {
-    display: block;
-    float: left;
-    width: 25%;
-}
-
-.cat-pic {
-    width: 100%;
-    margin: 0 !important;
+    margin: 5px 5px;
     overflow: hidden;
     background: #000000;
+    border: none;
+    padding: 0;
 }
 
-.cat-pic img {
+.catPicContainer img {
     opacity: 0.7;
     width: 100%;
     margin: 0;
-    transform: scale(1.15);
+    transform: scale(1);
     transition: transform 0.5s, opacity 0.5s;
+    object-fit: fill;
+    height: 30vh;
+    overflow: hidden;
 }
 
-.cat-pic img:hover {
-    width: 100%;
+.catPicContainer:hover img {
     margin: 0;
-    height: auto;
-    transform: scale(1.03);
+    width: 100%;
+    height: 30vh;
+    transform: scale(1.05);
     opacity: 1;
 }
 
+@media(max-width:768px) and (min-width:500px)
+{
+    .catPicContainer img,
+    .catPicContainer:hover img  {
+        height: 150px;
+    }
+}
 
 /*--------------------------------------*/
 /*Footer.*/
@@ -224,6 +216,11 @@ footer {
     color: #686868;
 }
 
+footer p{
+    margin: 0;
+    margin: 10px;
+}
+
 
 @media (max-width: 500px){
     .cat-pic{
@@ -232,6 +229,9 @@ footer {
     .col{
         padding-left: 4.6vw;
         padding-right: 4.6vw;
+    }
+    .pics-features #r2{
+        margin-top: 0;
     }
 }
 
@@ -258,3 +258,8 @@ footer {
   ::-webkit-scrollbar-thumb:hover {
     background: #fc86d3; 
   }
+
+  
+.hide{
+    display: none;
+}

@@ -28,7 +28,6 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
             <div class="list-group list-inline" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action active first" id="list-overview-list" data-toggle="list" href="#list-overview" role="tab" aria-controls="overview">Overview</a>
                 <a class="list-group-item list-group-item-action" id="list-events-list" data-toggle="list" href="#list-events" role="tab" aria-controls="events">Events</a>
-                <a class="list-group-item list-group-item-action" id="list-update-list" data-toggle="list" href="#list-update" role="tab" aria-controls="update">Update</a>
                 <a class="list-group-item list-group-item-action" id="list-memories-list" data-toggle="list" href="#list-memories" role="tab" aria-controls="memories">Memories</a>
             </div>
         </div>
