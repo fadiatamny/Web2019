@@ -78,6 +78,9 @@ printNav('') ?>
             <div class="form-group row justify-content-center">
                 <p class="errorTxt hide">*Please fill all the fields.*</p>
             </div>
+            <div class="form-group row justify-content-center">
+                <h4>Please input your details: </h4>
+            </div>
             <div class=" form-group row justify-content-center">
                 <div class="form-group col-md-5">
                     <label for="name" class="col-md-5 col-form-label">Full Name:</label>
