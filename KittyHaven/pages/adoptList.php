@@ -1,5 +1,5 @@
 <?php require_once('./templates/head.php');
-printHead("KitKatt's Profile"); ?>
+printHead("Adoption List"); ?>
 <?php require_once('./templates/navbar.php');
 printNav('') ?>
 

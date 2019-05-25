@@ -1,5 +1,5 @@
 <?php require_once('./templates/head.php');
-printHead("KitKatt's Profile"); ?>
+printHead("Kitty Profile"); ?>
 <?php require_once('./templates/navbar.php');
 printNav('') ?>
 <div class="container catDetails">

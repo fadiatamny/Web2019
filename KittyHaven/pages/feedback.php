@@ -1,5 +1,5 @@
 <?php require_once('./templates/head.php');
-printHead("KitKatt's Profile"); ?>
+printHead("Redirecting..."); ?>
 <?php require_once('./templates/navbar.php');
 $pic = $_GET['pic'];
 if($pic == "''" || $pic == null)

@@ -5,10 +5,10 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
 <header class="userHeader">
     <div class="container">
         <div class="row">
-            <div class="col col-md-3">
+            <div class="col col-md-4">
                 <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg" class="kittyPic">
             </div>
-            <div class="col">
+            <div class="col-md">
                 <div class="text">
                     <h1>KitKatt</h1>
                     <h5>Age: 5 | Adopted: 19/06/1996</h5>
