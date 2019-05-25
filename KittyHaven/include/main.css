@@ -75,7 +75,7 @@ footer{
 /*-----------------------------*/
 
 #blacklogo{
-    background: url(../../images/blacklogo.png) no-repeat left;
+    background: url(../images/blacklogo.png) no-repeat left;
     background-size: contain;
     height: 50px;
     width: 50px;

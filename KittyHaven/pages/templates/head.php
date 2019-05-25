@@ -17,7 +17,7 @@ function printHead($title){
 
 
             <!-- Custom styles for this template -->
-            <link href="../include/CSS/main.css" rel="stylesheet">
+            <link href="../include/main.css" rel="stylesheet">
 
             ';
 }

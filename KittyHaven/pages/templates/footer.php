@@ -25,7 +25,7 @@ function printFooter($scripts){
 
     baseFooter();
     foreach ($scripts as $value){
-        echo '<script src="../include/SCRIPTS/'.$value.'"></script>';
+        echo '<script src="../include/'.$value.'"></script>';
     }
     echo '</body>
     </html>';
