@@ -1,6 +1,6 @@
-<?php require_once('../templates/head.php');
-printHead("KitKatt's Profile", ['admin.css']); ?>
-<?php require_once('../templates/navbar.php');
+<?php require_once('./templates/head.php');
+printHead("KitKatt's Profile"); ?>
+<?php require_once('./templates/navbar.php');
 printNav('') ?>
 
 <div class="container header">
@@ -64,5 +64,5 @@ printNav('') ?>
     </div>
 </div>
 
-<?php require_once('../templates/footer.php');
+<?php require_once('./templates/footer.php');
 printFooter(['admin.js']) ?>

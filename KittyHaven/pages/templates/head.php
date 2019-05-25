@@ -1,6 +1,5 @@
 <?php
-
-function elements($title){
+function printHead($title){
     echo '<!DOCTYPE html>
     <html lang="en">
         <head>
@@ -14,19 +13,12 @@ function elements($title){
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
             <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <link rel="icon" href="../favicons/favicon.ico">
 
 
             <!-- Custom styles for this template -->
-            <link href="../include/main.css" rel="stylesheet">
+            <link href="../include/CSS/main.css" rel="stylesheet">
 
             ';
-}
-function printHead($title,$includes){
-
-        elements($title);
-        foreach ($includes as $value){
-            echo '<link href="../include/'.$value.'" rel="stylesheet">';
-        }
-        echo '    </head><body>';
 }
 ?>

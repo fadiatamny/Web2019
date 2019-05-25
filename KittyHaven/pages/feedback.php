@@ -1,6 +1,6 @@
-<?php require_once('../templates/head.php');
-printHead("KitKatt's Profile", ['admin.css']); ?>
-<?php require_once('../templates/navbar.php');
+<?php require_once('./templates/head.php');
+printHead("KitKatt's Profile"); ?>
+<?php require_once('./templates/navbar.php');
 $pic = $_GET['pic'];
 if($pic == "''" || $pic == null)
     printNav('');
@@ -22,5 +22,5 @@ echo '<div class="container" style="margin-top:30vh;">
     },3000);
 </script>';
 ?>
-<?php require_once('../templates/footer.php');
+<?php require_once('./templates/footer.php');
 printFooter([]) ?>

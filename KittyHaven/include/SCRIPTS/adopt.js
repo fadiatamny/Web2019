@@ -11,15 +11,18 @@
         if($('#fullName').val() == '' || $('#address').val() == '' ||  $('#phoneNum').val() == '' ||  $('#email').val() == '' ){
             $('.errorTxt').css('display','block');
             $('.goAhead').css('display','none');
-            $('.sure').html('Cannot Proceed with fields empty');
+            $('.sureTitle').html('Error!');
+            $('.sureBody').html('Cannot Proceed with fields empty');
+            
         }else{
+            $('.sureTitle').html('Are you sure?');
+            $('.sureBody').html('are you sure you want to adop this cat?');
             $('.errorTxt').css('display','none');
             $('.goAhead').css('display','block');
-            $('#makeSure').css('display','none');
         }
     });
-    $('.goAhead').click(function(){
-
+    $('.goAhead').click(function(e){
+        e.preventDefault();
         setTimeout(function(){
             clearOut();
         },5000);

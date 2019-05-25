@@ -1,6 +1,6 @@
-<?php require_once('../templates/head.php');
-printHead("KitKatt's Profile", ['admin.css']); ?>
-<?php require_once('../templates/navbar.php');
+<?php require_once('./templates/head.php');
+printHead("KitKatt's Profile"); ?>
+<?php require_once('./templates/navbar.php');
 printNav('') ?>
 <div class="container catDetails">
     <div class="row justify-content-center">
@@ -25,19 +25,19 @@ printNav('') ?>
     <div class="borderLine"></div>
 </div>
 
-<div class="wrapper personalDataForm">
+<div class="personalDataForm">
 
 
         <div class="modal fade" id="makeSure" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="">Are you sure?</h5>
+                        <h5 class="modal-title sureTitle" id="">Are you sure?</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body sureBody">
                         are you sure you want to adop this cat?
                     </div>
                     <div class="modal-footer">
@@ -78,32 +78,32 @@ printNav('') ?>
             <div class="form-group row justify-content-center">
                 <p class="errorTxt hide">*Please fill all the fields.*</p>
             </div>
-            <div class=" form-group row">
-                <div class="form-group col-md">
+            <div class=" form-group row justify-content-center">
+                <div class="form-group col-md-5">
                     <label for="name" class="col-md-5 col-form-label">Full Name:</label>
                     <div class="col-md">
                         <input type="text" class="form-control" name="fullName" id="fullName" value="" placeholder="John Doe">
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="form-group col-md">
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
                     <label for="url" class="col-md-5 col-form-label">Address: </label>
                     <div class="col-md-12">
                         <input class="form-control" type="text" id="address" name="address" value="" placeholder="15th street, town, city">
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="form-group col-md">
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
                     <label for="url" class="col-md-5 col-form-label">Phone: </label>
                     <div class="col-md-12">
                         <input class="form-control" type="text" id="phoneNum" name="phoneNum" value="" placeholder="xxx-xxx-xxxx">
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="form-group col-md">
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
                     <label for="url" class="col-md-5 col-form-label">Email: </label>
                     <div class="col-md-12">
                         <input class="form-control" type="email" id="email" name="email" value="" placeholder="example@stuff.com">
@@ -121,5 +121,5 @@ printNav('') ?>
         </div>
     </div>
 
-    <?php require_once('../templates/footer.php');
+    <?php require_once('./templates/footer.php');
     printFooter(['adopt.js']) ?>

@@ -1,0 +1,629 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    color: #000000;
+}
+
+header,
+nav,
+main,
+section,
+footer,
+div{
+    display : block;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+header,
+footer{
+    width: 100%;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 85vw;
+}
+
+.clear{
+    clear: both;
+}
+
+
+/*-----------------------------*/
+/*scrollbar*/
+/*-----------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1  ; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fc86d3; 
+  }
+
+
+/*-----------------------------*/
+/*navbar*/
+/*-----------------------------*/
+
+#blacklogo{
+    background: url(../../images/blacklogo.png) no-repeat left;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 65px;
+}
+
+.main-nav li {
+    float: left;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px 8px 0px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 300;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fc86d3;
+}
+
+.navbar{
+    background: #fed9f1;
+}
+
+.header{
+    margin-top: 15vh;
+}
+
+.sticky{
+    position: fixed;
+    width: 100%;
+}
+
+.sticky .main-nav {
+    margin-top: 15px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 15px 0px 15px 0px;
+    color: #555;
+
+}
+
+.sticky .logo { display:none; }
+.sticky .blacklogo{ display: block; }
+
+footer {
+    position: fixed;
+    background-color: #272727;
+    color: #686868;
+    bottom: 0px;
+}
+
+main{
+    margin-top:50px;
+}
+
+footer p{
+    margin: 0;
+    margin: 10px;
+}
+
+a:hover.dropdown-item{
+    background-color: #fed9f1;
+    text-decoration: none;
+}
+
+
+/*-----------------------------*/
+/*repeatable*/
+/*-----------------------------*/
+
+.loginForm{
+    margin-top: 15vh;
+    height: 80vh;
+}
+
+.form-signin input{
+    margin-bottom:10px;
+}
+
+.form-signin input:active{
+    border-color: #FDA7DF;
+}
+
+.btn-primary{
+    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+    background-color: #FDA7DF;
+    border: 1px solid #FDA7DF;
+}
+
+.btn-primary:hover{
+    background-color: #fc86d3;
+    border: 1px solid #fc86d3;
+}
+
+input:focus,
+textarea:focus{   
+    border-color: #FDA7DF !important;
+    box-shadow: 0 1px 1px #00000013 inset, 0 0 8px #FDA7DF !important;
+    outline: 0 none !important;
+}
+
+.borderLine{
+    width: 600px;
+    margin: 5vh auto;
+    height: 2px;
+    background: #fc86d3;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    position: absolute;
+}
+
+.hide{
+    display: none;
+}
+
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+
+/*Admin Page + adoption css*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+
+/*-----------------------------*/
+/*cat list*/
+/*-----------------------------*/
+#catsList{
+    margin-bottom: 50px;
+}
+.catPicContainer {
+    width: 100%;
+    margin:15px 15px;
+    overflow: hidden;
+    background: #000000;
+    border: none;
+    padding: 0;
+}
+
+.catPicContainer img {
+    opacity: 0.7;
+    width: 100%;
+    margin: 0;
+    transform: scale(1);
+    transition: transform 0.5s, opacity 0.5s;
+    object-fit: fill;
+    height: 30vh;
+}
+
+.catDescriptionContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fc86d3b9;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    overflow: hidden;
+    transition: opacity .2s, visibility .2s;
+}
+
+.catDescription {
+    transition: .2s;
+    transform: translateY(1em);
+}
+
+.catPicContainer:hover .catDescriptionContainer {
+    visibility: visible;
+    opacity: 1;
+}
+
+.catPicContainer:hover img {
+    width: 100%;
+    margin: 0;
+    height: 30vh;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.catPicContainer:hover .catDescription {
+    transform: translateY(0);
+}
+/*-----------------------------*/
+/*header for admin search / user*/
+/*-----------------------------*/
+.header{
+    height: 10vh;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header h1{
+    float: left;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ff60c7;
+    margin-left: 10vw;
+}
+
+.container.header{
+    height: auto;
+    margin-top: 15vh;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container.header h1{
+    float: none;
+    padding-top: 10px;
+    font-size: 50px;
+    padding-bottom: 10px;
+    border-bottom: none;
+    margin-left: 0;
+}
+.container.header p{
+    font-size: 20px;
+}
+
+.addBtn{
+    float: right;
+    color: #FDA7DF;
+    border: 1px solid #FBBBE4;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.2s, border-color 0.2s;
+    margin-right: 10vw;
+}
+.addBtn:hover{
+    color: #fc92d7;
+    border-color: #ff8fd6;
+    text-decoration: none;
+}
+
+.borderLine{
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+/*-----------------------------*/
+/*cat form css for updating or adding new*/
+/*-----------------------------*/
+.catForm{
+    margin-top: 15vh;
+}
+
+.catForm .label{
+    margin-bottom: 10px;
+}
+
+
+.catForm textarea#description {
+    margin-left: 15px;
+}
+
+.errorTxt{
+    color: #f32121;
+    font-weight: bold;
+    font-size: 30px;
+    display: none;
+}
+
+.btns a{
+    margin-left: 15px;
+}
+
+.btns a:first-child{
+    margin-left: 0px;
+}
+
+.controls{
+    margin-bottom: 10vh;
+}
+/*-----------------------------*/
+/*adoption stuff*/
+/*-----------------------------*/
+
+.logoPic,
+.catPic,
+.modalCatPic{
+    height: 30vh;
+    width: 30vh;
+    object-fit: fill;
+}
+.thankYou,
+.catName,
+.catNameModal{
+    margin-top: 5vh;   
+}
+.letter,
+.catDescription,
+.catDescriptionModal{
+    margin-top: 20px;
+    padding-right: 40px;
+}
+
+.catDetails{
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+.personalDataForm .logoPic{
+    float:right;
+}
+
+.personalDataForm .buttons{
+    float:right;
+}
+
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+
+/*user css*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+/*-----------------------------*/
+
+
+.userHeader{
+    margin-top: 15vh;
+}
+
+.kittyPic{
+    height:15vh;
+    border-radius: 15px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.text{
+    padding-top: 2vh;
+}
+
+.navList{
+    height:100%;
+    background: #fc86d3;
+    width: 2px;
+}
+
+.list-group-item.active {
+    background-color: #fed3ef ;
+    border-color: #fed3ef ;
+    color: #666666;
+}
+
+
+#data{
+    min-height: 40vh;
+    margin-bottom: 10vh;
+}
+
+.list-group-item{
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    border-top: 1px 1px solid #00000020;
+}
+
+.first{
+    border: none;
+}
+
+/*-----------------------------*/
+/*Acordion*/
+/*-----------------------------*/
+
+.text{
+    margin-bottom: 30px;
+}
+
+.ui-state-active{
+    background: #fc86d3;
+    border: 1px solid #fc86d3;
+}
+
+.ui-accordion-header {outline: none;}
+
+.ui-accordion .ui-accordion-header{
+margin: 10px 0  0 0 !important;
+}
+
+/*-----------------------------*/
+/*Memories*/
+/*-----------------------------*/
+
+.memoryInfo{
+    width:50%;
+}
+
+.pagesPictures{
+    position: absolute;
+    bottom:0;
+    width: 40%;
+    padding-top:10vh;
+}
+
+.pagesPictures img{
+    margin: 5px;
+    width: 25%;
+    float: left;
+    height: 80px;
+}
+
+.pagesPictures img:hover{
+    transform: scale(1.05);
+}
+
+#memoryImg{
+    position: absolute;
+    top:0;
+    right:0;
+    width:350px;
+    height:350px;
+    object-fit: fill;
+}
+
+.pagesPictures{
+    float: left;
+}
+
+/*-----------------------------*/
+/*Queries*/
+/*-----------------------------*/
+
+
+@media (min-width:768px) and (max-width:1023px){
+    .memoryInfo{
+        width: 50%;
+    }
+    .pagesPictures{
+        position: absolute;
+        right:0;
+        top:0;
+        width: 15%;
+        padding-top:0;
+    }
+    
+    .pagesPictures img{
+        width: 80px;
+    }
+    
+    .pagesPictures img:hover{
+        transform: scale(1.05);
+    }
+    
+    #memoryImg{
+        position: relative;
+        float:left;
+        width:80%;
+        margin-bottom: 50px;
+    }
+
+    .pagesPictures:last-child{
+        margin-bottom: 50px;
+    }
+
+}
+
+@media(max-width:768px) and (min-width:500px){
+    .catPicContainer img,
+    .catPicContainer:hover img  {
+        height: 150px;
+    }
+}
+
+@media (max-width:767px){
+    .borderLine{
+        width:100%;
+    }
+
+    .navList{
+        margin: 5vh auto;
+        width: 100%;
+        height: 2px;
+    }
+    
+    .navSeperator{
+        width:100%;
+    }
+
+    .pagesPictures{
+        position: relative;
+        width: 100%;
+        margin: 0 5%;
+        padding:0;
+    }
+    
+    .picDisplay div:last-child{
+        margin-bottom: 50px;
+    }
+    .pagesPictures img{
+        width: 28%;
+    }
+    
+    #memoryImg{
+        position: relative;
+        width:100%;
+    }
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 50vw;
+        margin: 1.75rem auto;
+    }
+}

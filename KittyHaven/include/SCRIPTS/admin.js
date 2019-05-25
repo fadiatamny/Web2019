@@ -2,8 +2,7 @@ var cats = [];
 var selectedCat = null;
 var selectedIndex = -1;
 
-(function () {
-    var login = localStorage.getItem('login');
+(function () {    
     if(localStorage.getItem('login') == 'user'){
         window.location.replace("./user.php");
     }

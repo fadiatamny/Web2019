@@ -1,6 +1,6 @@
-<?php require_once('../templates/head.php');
-printHead("KitKatt's Profile", ['user.css']); ?>
-<?php require_once('../templates/navbar.php');
+<?php require_once('./templates/head.php');
+printHead("KitKatt's Profile"); ?>
+<?php require_once('./templates/navbar.php');
 printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png') ?>
 <header class="userHeader">
     <div class="container">
@@ -36,13 +36,13 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
         </div>
         <div class="col-md" id="data">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-overview" role="tabpanel" aria-labelledby="list-overview-list"><?php require_once('../pages/overview.php'); ?></div>
-                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list"><?php require_once('../pages/events.php'); ?></div>
-                <div class="tab-pane fade" id="list-memories" role="tabpanel" aria-labelledby="list-memories-list"><?php require_once('../pages/memories.php'); ?></div>
+                <div class="tab-pane fade show active" id="list-overview" role="tabpanel" aria-labelledby="list-overview-list"><?php require_once('../pages/userComponents/overview.php'); ?></div>
+                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list"><?php require_once('../pages/userComponents/events.php'); ?></div>
+                <div class="tab-pane fade" id="list-memories" role="tabpanel" aria-labelledby="list-memories-list"><?php require_once('../pages/userComponents/memories.php'); ?></div>
             </div>
         </div>
     </div>
 </div>
 
-<?php require_once('../templates/footer.php');
+<?php require_once('./templates/footer.php');
 printFooter(['user.js']) ?>

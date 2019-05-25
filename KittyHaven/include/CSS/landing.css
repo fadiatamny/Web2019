@@ -22,7 +22,16 @@ html {
 /*--------------------------------------*/
 
 section {
-    padding: 80px 0 80px 0;
+    padding: 0 0 30px 0;
+}
+
+.pics-features{
+    padding-top: 60px;
+}
+
+  
+.hide{
+    display: none;
 }
 
 /*--------------------------------------*/
@@ -103,7 +112,7 @@ header {
 }
 
 #logo{
-    background: url(../images/logo.png) no-repeat left;
+    background: url(../../images/logo.png) no-repeat left;
     background-size: contain;
     height: 100px ;
     width: 100px;
@@ -111,7 +120,7 @@ header {
 }
 
 #blacklogo{
-    background: url(../images/blacklogo.png) no-repeat left;
+    background: url(../../images/blacklogo.png) no-repeat left;
     background-size: contain;
     height: 50px;
     width: 50px;
@@ -186,26 +195,19 @@ header {
     margin: 0;
     transform: scale(1);
     transition: transform 0.5s, opacity 0.5s;
-    object-fit: fill;
-    height: 30vh;
     overflow: hidden;
+    object-fit: fill;
+    max-height: 17vw;
 }
 
 .catPicContainer:hover img {
     margin: 0;
     width: 100%;
-    height: 30vh;
     transform: scale(1.05);
     opacity: 1;
 }
 
-@media(max-width:768px) and (min-width:500px)
-{
-    .catPicContainer img,
-    .catPicContainer:hover img  {
-        height: 150px;
-    }
-}
+
 
 /*--------------------------------------*/
 /*Footer.*/
@@ -219,20 +221,6 @@ footer {
 footer p{
     margin: 0;
     margin: 10px;
-}
-
-
-@media (max-width: 500px){
-    .cat-pic{
-        width:78vw;
-    }
-    .col{
-        padding-left: 4.6vw;
-        padding-right: 4.6vw;
-    }
-    .pics-features #r2{
-        margin-top: 0;
-    }
 }
 
 /*-----------------------------*/
@@ -259,7 +247,44 @@ footer p{
     background: #fc86d3; 
   }
 
-  
-.hide{
-    display: none;
+/*-----------------------------*/
+/*Queries*/
+/*-----------------------------*/
+
+@media (max-width:768px){
+    .navbar-nav{
+        margin-right: 50px;
+        float:right;
+    }
+}
+
+@media (max-width:768px) and (min-width:500px)
+{
+    .catPicContainer img,
+    .catPicContainer:hover img  {
+        height: 150px;
+    }
+}
+
+@media (max-width: 500px){
+    .cat-pic{
+        width:78vw;
+    }
+    .catPicContainer img{
+        max-height: 100%;
+    }
+    .col{
+        padding-left: 4.6vw;
+        padding-right: 4.6vw;
+    }
+    .pics-features #r2{
+        margin-top: 0;
+    }
+    .button:link, .button:visited{
+        margin-left: 15vw;
+    }
+
+    .slogan-text-box {
+        top: 30%;
+    }
 }

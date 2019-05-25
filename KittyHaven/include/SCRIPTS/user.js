@@ -1,6 +1,5 @@
 
 (function(){
-    var login = localStorage.getItem('login');
     if(localStorage.getItem('login') == 'admin'){
         window.location.replace("./admin.php");
     }
@@ -43,11 +42,12 @@ var initPics = function(data){
     for (var obj of data) {
         var div = $('<div class="picContainer"></div>')
         var pic = $('<a href="#" class="catClick"><img src="'+obj.Url+'" id="'+ count++ +'"></a>');
-        pic.click(function() {
+        pic.click(function(e) {
             selected = picsArray[$(this).children()[0].id];
             $('.memoryInfo .title').html(selected.Title);
             $('.memoryInfo .description').html(selected.Description);
             $('#memoryImg').attr('src',selected.Url);
+            e.preventDefault();
         });
         div.append(pic);
         $('.pagesPictures').append(div);
