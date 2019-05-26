@@ -191,6 +191,7 @@ a:hover.dropdown-item{
 .btn-primary:focus{
     background-color: #fc86d3 !important;
     border: 1px solid #fc86d3 !important;
+    outline: none !important;
 }
 
 input:focus,
