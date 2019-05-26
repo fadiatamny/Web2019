@@ -186,9 +186,11 @@ a:hover.dropdown-item{
     border: 1px solid #FDA7DF;
 }
 
-.btn-primary:hover{
-    background-color: #fc86d3;
-    border: 1px solid #fc86d3;
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background-color: #fc86d3 !important;
+    border: 1px solid #fc86d3 !important;
 }
 
 input:focus,

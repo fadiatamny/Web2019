@@ -1,2 +1,2 @@
 <h1>McFluffings</h1>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit mauris in erat facilisis, id pretium eros ultricies. Fusce ut luctus tellus. Duis vitae dolor urna. Phasellus posuere ligula at felis vestibulum fermentum. Suspendisse pellentesque posuere eros, laoreet scelerisque eros efficitur vel. Quisque porta semper augue id faucibus. Nulla eleifend felis quis ante pulvinar porttitor.</p>
+<p> He is but a little rascal who likes to scratch his way to glory. if you do not satisfy his bloodlust early he will go for your arms and legs but he will make sure you still love him by the end of the day #TooCute</p>
