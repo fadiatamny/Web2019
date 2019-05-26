@@ -74,10 +74,12 @@ printNav('') ?>
         </div>
     </div>
 
-    <div class="catForm">
+    <div class="catForm container">
+
         <div class="form-group row justify-content-center">
             <p class="errorTxt hide">*Please fill all the fields.*</p>
         </div>
+
         <div class="form-group row justify-content-center">
             <h4>Please input your details: </h4>
         </div>

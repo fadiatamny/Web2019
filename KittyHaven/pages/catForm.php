@@ -3,6 +3,10 @@ printHead("Kitty Profile"); ?>
 <?php require_once('./templates/navbar.php');
 printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png') ?>
 
+<div class="header">
+    <h1>Cat Info: </h1>
+</div>
+
 <div class="wrapper">
     <div class="catForm">
 

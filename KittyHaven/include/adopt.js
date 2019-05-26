@@ -8,6 +8,7 @@
         window.location.replace("./adoptList.php");
     });
     $('.finishAdopt').click(function(){
+        console.log($('#fullName'));
         if($('#fullName').val() == '' || $('#address').val() == '' ||  $('#phoneNum').val() == '' ||  $('#email').val() == '' ){
             $('.errorTxt').css('display','block');
             $('.goAhead').css('display','none');

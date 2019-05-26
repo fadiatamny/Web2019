@@ -623,6 +623,10 @@ margin: 10px 0  0 0 !important;
         position: relative;
         width:100%;
     }
+
+    .errorTxt{
+        font-size: 25px;
+    }
 }
 
 @media (min-width: 576px){

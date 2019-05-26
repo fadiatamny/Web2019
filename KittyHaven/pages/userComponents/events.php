@@ -1,10 +1,8 @@
 <div id="accordion">
 
-  <h3 class="event-date">Tuesday, October 21, 2015</h3>
+  <h3 class="event-date">Walk in the park - Tuesday, October 21, 2015</h3>
   <li class="Oct202015event">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </li>
-
+  at this shiny day as we walked by the park my cat decided to jump on my face and scratch me to death. it was very pleasant since it decided to notice my existence for the first time other than being a food giver or so but it is refreshing to know that it sometimes realizes I'm alive.
   <h3 class="event-date">Wednesday, October 20, 2015</h3>
   <li class="Oct212015event">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
