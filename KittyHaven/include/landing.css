@@ -171,6 +171,7 @@ header {
 .sticky .nav-link:hover,
 .sticky .nav-link:active {
     opacity: 1 !important;
+    
     border-bottom: 2px solid #fc86d3 !important;
 }
 
@@ -258,6 +259,7 @@ footer p{
     }
 }
 
+
 @media (max-width:768px) and (min-width:500px)
 {
     .catPicContainer img,
@@ -283,5 +285,9 @@ footer p{
 
     .slogan-text-box {
         top: 30%;
+        margin-top: 5vh;
+    }
+    header{
+        height:120vh;
     }
 }
