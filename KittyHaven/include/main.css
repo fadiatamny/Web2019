@@ -51,10 +51,6 @@ footer p{
     margin: 10px;
 }
 
-.header{
-    margin-top: 15vh;
-}
-
 .wrapper{
     margin: 0 auto;
     width: 85vw;
@@ -64,6 +60,13 @@ footer p{
     clear: both;
 }
 
+.feedbackHead{
+    margin-top:30vh;
+}
+
+.responseText{
+    margin-bottom: 5vh;
+}
 
 /*-----------------------------*/
 /*scrollbar*/
@@ -296,6 +299,7 @@ textarea:focus{
 /*header for admin search / user*/
 /*-----------------------------*/
 .header{
+    margin-top: 15vh;    
     height: 10vh;
     padding-right: 15px;
     padding-left: 15px;
@@ -312,7 +316,6 @@ textarea:focus{
 
 .container.header{
     height: auto;
-    margin-top: 15vh;
 }
 
 .container.header h1{

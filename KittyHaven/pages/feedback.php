@@ -10,9 +10,9 @@ else
 <?php
 $data = $_GET['feedback'];
 $location = $_GET['loc'];
-echo '<div class="container" style="margin-top:30vh;">
-    <div class="row justify-content-center"> <h1> '.$data.' ! </h1></div>
-    <div class="row justify-content-center"> <h2> Redirecting in 3 seconds ... </h2> </div>
+echo '<div class="container wrapper feedbackHead">
+    <div class="row justify-content-center responseText"> <h1> '.$data.' ! </h1></div>
+    <div class="row justify-content-center"> <h4> Redirecting in 3 seconds ... </h2> </div>
 </div>
 
 <script>
