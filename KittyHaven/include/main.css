@@ -367,9 +367,6 @@ textarea:focus{
 }
 
 
-.catForm textarea#description {
-    margin-left: 15px;
-}
 
 .errorTxt{
     color: #f32121;

@@ -85,34 +85,26 @@ printNav('') ?>
         </div>
         <div class=" form-group row justify-content-center">
             <div class="form-group col-md-5">
-                <label for="name" class="col-md-5 col-form-label">Full Name:</label>
-                <div class="col-md">
-                    <input type="text" class="form-control" name="fullName" id="fullName" value="" placeholder="John Doe" required>
-                </div>
+                <label for="name" class="col-form-label">Full Name:</label>
+                <input type="text" class="form-control" name="fullName" id="fullName" value="" placeholder="John Doe" required>
             </div>
         </div>
         <div class="form-group row justify-content-center">
             <div class="form-group col-md-5">
-                <label for="url" class="col-md-5 col-form-label">Address: </label>
-                <div class="col-md-12">
-                    <input class="form-control" type="text" id="address" name="address" value="" placeholder="15th street, town, city">
-                </div>
+                <label for="url" class="col-form-label">Address: </label>
+                <input class="form-control" type="text" id="address" name="address" value="" placeholder="15th street, town, city">
             </div>
         </div>
         <div class="form-group row justify-content-center">
             <div class="form-group col-md-5">
-                <label for="url" class="col-md-5 col-form-label">Phone: </label>
-                <div class="col-md-12">
-                    <input class="form-control" type="tel" id="phoneNum" pattern="^[0-9-+s()*]*$" name="phoneNum" value="" placeholder="xxx-xxx-xxxx">
-                </div>
+                <label for="url" class="col-form-label">Phone: </label>
+                <input class="form-control" type="tel" id="phoneNum" pattern="^[0-9-+s()*]*$" name="phoneNum" value="" placeholder="xxx-xxx-xxxx">
             </div>
         </div>
         <div class="form-group row justify-content-center">
             <div class="form-group col-md-5">
-                <label for="url" class="col-md-5 col-form-label">Email: </label>
-                <div class="col-md-12">
-                    <input class="form-control" type="email" id="email" name="email" value="" placeholder="example@stuff.com">
-                </div>
+                <label for="url" class="col-form-label">Email: </label>
+                <input class="form-control" type="email" id="email" name="email" value="" placeholder="example@stuff.com">
             </div>
         </div>
 
