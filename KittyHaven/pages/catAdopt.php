@@ -75,46 +75,44 @@ printNav('') ?>
     </div>
 
     <div class="catForm container">
-
-        <div class="form-group row justify-content-center">
-            <p class="errorTxt hide">*Please fill all the fields.*</p>
-        </div>
-
-        <div class="form-group row justify-content-center">
-            <h4>Please input your details: </h4>
-        </div>
-        <div class=" form-group row justify-content-center">
-            <div class="form-group col-md-5">
-                <label for="name" class="col-form-label">Full Name:</label>
-                <input type="text" class="form-control" name="fullName" id="fullName" value="" placeholder="John Doe" required>
+        <form>
+            <div class="form-group row justify-content-center">
+                <p class="errorTxt hide">*Please fill all the fields.*</p>
             </div>
-        </div>
-        <div class="form-group row justify-content-center">
-            <div class="form-group col-md-5">
-                <label for="url" class="col-form-label">Address: </label>
-                <input class="form-control" type="text" id="address" name="address" value="" placeholder="15th street, town, city">
+            <div class="form-group row justify-content-center">
+                <h4>Please input your details: </h4>
             </div>
-        </div>
-        <div class="form-group row justify-content-center">
-            <div class="form-group col-md-5">
-                <label for="url" class="col-form-label">Phone: </label>
-                <input class="form-control" type="tel" id="phoneNum" pattern="^[0-9-+s()*]*$" name="phoneNum" value="" placeholder="xxx-xxx-xxxx">
+            <div class=" form-group row justify-content-center">
+                <div class="form-group col-md-5">
+                    <label for="name" class="col-form-label">Full Name:</label>
+                    <input type="text" class="form-control" name="fullName" id="fullName" value="" placeholder="John Doe" required>
+                </div>
             </div>
-        </div>
-        <div class="form-group row justify-content-center">
-            <div class="form-group col-md-5">
-                <label for="url" class="col-form-label">Email: </label>
-                <input class="form-control" type="email" id="email" name="email" value="" placeholder="example@stuff.com">
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
+                    <label for="url" class="col-form-label">Address: </label>
+                    <input class="form-control" type="text" id="address" name="address" value="" placeholder="15th street, town, city">
+                </div>
             </div>
-        </div>
-
-
-        <div class="controls">
-            <div class="form-group row justify-content-center btns">
-                <a href="#" class="btn btn-primary finishAdopt" data-toggle="modal" data-target="#makeSure">Adopt!</a>
-                <a href="#" class="btn btn-primary cancelBtn">Cancel</a>
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
+                    <label for="url" class="col-form-label">Phone: </label>
+                    <input class="form-control" type="tel" id="phoneNum" pattern="^[0-9-+s()*]*$" name="phoneNum" value="" placeholder="xxx-xxx-xxxx">
+                </div>
             </div>
-        </div>
+            <div class="form-group row justify-content-center">
+                <div class="form-group col-md-5">
+                    <label for="url" class="col-form-label">Email: </label>
+                    <input class="form-control" type="email" id="email" name="email" value="" placeholder="example@stuff.com">
+                </div>
+            </div>
+            <div class="controls">
+                <div class="form-group row justify-content-center btns">
+                    <a href="#" class="btn btn-primary finishAdopt" data-toggle="modal" data-target="#makeSure">Adopt!</a>
+                    <a href="#" class="btn btn-primary cancelBtn">Cancel</a>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 

@@ -1,4 +1,5 @@
-<div class="updateForm">
+<!-- This file is for adding an event not in use currently and will be in the final product-->
+<div class="updateForm"> 
     <form action="idkwhereyet" method="POST">
         <div class="form-group row">
             <div class="form-group col-md-6">
