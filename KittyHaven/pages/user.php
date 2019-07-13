@@ -6,12 +6,12 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
     <div class="container">
         <div class="row">
             <div class="col col-md-4">
-                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg" class="kittyPic">
+                <img src="https://vignette.wikia.nocookie.net/warriorcatsclanroleplay/images/f/fc/Placeholder-pet.png/revision/latest?cb=20130716185616" class="kittyPic">
             </div>
             <div class="col-md">
                 <div class="text">
-                    <h1>KitKatt</h1>
-                    <h5>Age: 5 | Adopted: 19/06/1996</h5>
+                    <h1 id="catName"></h1>
+                    <h5 id="catAge"></h5>
                 </div>
             </div>
         </div>

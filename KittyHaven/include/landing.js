@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    check();
+    sessionStorage.clear();
+    sessionStorage.setItem('login','adopt');
+    
     $.getJSON("./data/cats.json",function(data){
         var count = 0;
         var rows = [];
@@ -67,19 +69,3 @@ $(document).ready(function() {
         $(this).removeClass('animated rubberBand');
     });
 });
-
-var check = function(){
-    var x = JSON.parse(sessionStorage.getItem('cat'));
-    var cats = JSON.parse(sessionStorage.getItem('cats'));
-    console.log(x);
-    console.log();
-    if( x === null && cats !== null){
-        $.post("./backend/write.php", { jsonFile : JSON.stringify(cats) }, function (data) {
-        });
-        sessionStorage.clear();
-        localStorage.clear();
-    }else{
-        localStorage.clear();
-        sessionStorage.clear();
-    }
-};

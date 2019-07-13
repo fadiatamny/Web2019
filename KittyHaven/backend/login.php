@@ -9,8 +9,29 @@ if(isset($_POST))  {
             die();
         }
     }else{
-        header("Location: ../pages/feedback.php?feedback=Login Successful&loc=user&pic=''");
-        die();
+        $con = mysqli_connect(
+            "182.50.133.168",
+            "studDB19a" ,
+            "stud19DB1!" ,
+            "studDB19a"
+            );
+        
+            if (mysqli_connect_errno()) {
+                echo "NULL";
+                die();
+            }
+        
+            $query = 'SELECT * FROM tbl_owners_89 WHERE Username = "'.$_POST['inputUser'].'" AND Password = "'.$_POST['inputPassword'].'";';
+            $res = mysqli_query($con, $query);
+            if(!$res){
+                header("Location: ../pages/feedback.php?feedback=Incorrect Login Please Retry&loc=login&pic=''");
+            }
+            else{
+                $row = mysqli_fetch_assoc($res);
+                header("Location: ../pages/feedback.php?feedback=Login Successful&loc=user&pic=''&id=".$row['ID']);
+                mysqli_close($con);
+                die();
+            }
     }
 }
 ?>

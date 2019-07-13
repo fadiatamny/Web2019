@@ -1,6 +1,6 @@
 (function () {
     var cat = JSON.parse(sessionStorage.getItem('cat'));
-    $('.catPic').attr('src',cat.Url);
+    $('.catPic').attr('src',"https://"+cat.Picture);
     $('.catName').html(cat.Name);
     $('.catDescription').html(cat.Description);
     $('.cancelBtn').click(function(){
@@ -8,7 +8,6 @@
         window.location.replace("./adoptList.php");
     });
     $('.finishAdopt').click(function(){
-        console.log($('#fullName'));
         if($('#fullName').val() == '' || $('#address').val() == '' ||  $('#phoneNum').val() == '' ||  $('#email').val() == '' ){
             $('.errorTxt').css('display','block');
             $('.goAhead').css('display','none');
@@ -24,9 +23,14 @@
     });
     $('.goAhead').click(function(e){
         e.preventDefault();
-        setTimeout(function(){
-            clearOut();
-        },5000);
+        var query = "INSERT INTO  `studDB19a`.`tbl_adoptionRequest_89` (`ID` ,`Name` ,`Address` ,`Phone` ,`Email` ,`CatID`)\
+            VALUES (NULL ,  '"+$('#fullName').val()+"',  '"+$('#address').val()+"',  '"+$('#phoneNum').val()+"',  '"+$('#email').val()+"',  '"+cat.ID+"');";
+        $.post("../backend/query.php",{query: query},function(){
+            setTimeout(function(){
+                clearOut();
+            },5000);        
+        });
+
     });
     
 })();
