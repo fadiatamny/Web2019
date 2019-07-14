@@ -308,6 +308,16 @@ textarea:focus{
     padding-left: 15px;
 }
 
+.aboutus{
+    margin-top: 25vh;
+}
+
+.aboustusHeader{
+    margin-bottom: 5vh;
+    margin-left: 25vw;
+    text-decoration: none;
+}
+
 .header h1{
     float: left;
     padding-top: 10px;
@@ -397,6 +407,14 @@ textarea:focus{
     width: 30vh;
     object-fit: fill;
 }
+
+.aboutusPic{
+    height: 10vh;
+    width: 10vh;
+    float: right;
+}
+
+
 .thankYou,
 .catName,
 .catNameModal{

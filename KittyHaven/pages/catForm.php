@@ -38,7 +38,7 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
             <div class="form-group row">
                 <div class="form-group col-md-10">
                     <label for="url" class="col-form-label">Website: </label>
-                    <input class="form-control" type="url" id="url" name="url" value="" placeholder="https://www.yourUrl.com">
+                    <input class="form-control" type="url" id="url" name="url" value="" placeholder="www.yourUrl.com">
                 </div>
             </div>
             <div class="form-group row">

@@ -4,12 +4,12 @@ printHead("Adoption List"); ?>
 printNav('') ?>
 
 <div class="container header">
-    <div class="row justify content center">
+    <div class="row justify-content-center">
         <div class="col-md">
             <h1>Welcome To Kitty Haven !</h1>
         </div>
     </div>
-    <div class="row justify content center">
+    <div class="row justify-content-center">
         <div class="col-md">
             <p>
                 Kitty haven is a site built for helping kittens around the world to find a loving home forever.<br>
