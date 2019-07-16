@@ -118,7 +118,6 @@ $(document).ready(function () {
 });
 
 var initPics = function (data) {
-    console.log(data);
     picsArray = data;
     var count = 0;
     for (var obj of data) {
