@@ -87,7 +87,7 @@ var response = function () {
     var url;
 
     if (sessionStorage.getItem('state') == 'update') {
-        query = "UPDATE  `studDB19a`.`tbl_cats_89` SET `Name` =  '" + obj.Name + "', `Description` =  '" + obj.Description + "', `Picture` =  '" + obj.Picture + "', `Age` =  '" + obj.Age + "' WHERE  `tbl_cats_89`.`ID` = " + cat.ID + ";";
+        query = "UPDATE  `studDB19a`.`tbl_cats_89` SET `Name` =  '" + obj.Name + "', `Description` =  '" + obj.Description + "', `Picture` =  '" + obj.Picture + "', `Age` =  '" + obj.Age + "' WHERE  `tbl_cats_89`.`ID` = '" + cat.ID + "';";
         url = "./feedback.php?feedback=Updated&loc=admin&pic=https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png";
     } else {
         query = "INSERT INTO  tbl_cats_89 (`ID` ,`Name` ,`Description` ,`Picture` ,`Age` ,`Gender` ,`Owner_ID` ,`Nickname` ,`AdoptDate`)\

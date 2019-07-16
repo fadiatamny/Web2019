@@ -89,7 +89,7 @@ $(document).ready(function () {
         $('#catAge').html(age);
         $('#catDesc').html("" + obj.Description);
         $('.kittyPic').attr('src', 'https://' + obj.Picture);
-        if(obj.Nickname == 'null')
+        if (obj.Nickname != 'null')
             $('#nickname').html('' + obj.Nickname);
         else
             $('#nickname').html('*Placeholder*');
@@ -101,7 +101,7 @@ $(document).ready(function () {
             query: query2
         }, function (data) {
             data = JSON.parse(data);
-            if(data.length != 0)
+            if (data.length != 0)
                 initPics(data);
         });
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
             query: query3
         }, function (data) {
             data = JSON.parse(data);
-            if(data.length != 0)
+            if (data.length != 0)
                 initEvents(data);
         });
     });
@@ -200,7 +200,8 @@ var insertEvent = function () {
 var updateEvent = function () {
     var id = $('.ui-state-active').attr('id');
     id = eventIDs[id - 1];
-    var query = "UPDATE  `studDB19a`.`tbl_events_89` SET `Title` =  '" + $('#eventTitle').val() + "', `Description` =  '" + $('#eventDes').val() + "' WHERE  `tbl_events_89`.`ID` = " + id + ";";
+    
+    var query = "UPDATE  `studDB19a`.`tbl_events_89` SET `Title` =  '" + $('#eventTitle').val() + "', `Description` =  '" + $('#eventDes').val() + "' WHERE  `tbl_events_89`.`ID` = '" + id + "';";
 
     $.post("../backend/query.php", {
         query: query
@@ -229,7 +230,7 @@ var deleteEvent = function () {
 
 var editDetails = function () {
 
-    var query = 'UPDATE  `studDB19a`.`tbl_cats_89` SET `Nickname` =  "' + $('#catNickname').val() + '", `Description` =  "' + $('#catDescription').val() + '" WHERE  `tbl_cats_89`.`ID` = ' + cat.ID + ';';
+    var query = 'UPDATE  `studDB19a`.`tbl_cats_89` SET `Nickname` =  "' + $('#catNickname').val() + '", `Description` =  "' + $('#catDescription').val() + '" WHERE  `tbl_cats_89`.`ID` = "' + cat.ID + '";';
 
     $.post("../backend/query.php", {
         query: query
@@ -245,7 +246,7 @@ var insertMem = function () {
     var query = 'INSERT INTO `studDB19a`.`tbl_memories_89` (`Title`, `Picture`, `Description`, `CatID`) VALUES ("' + $('#memTitle').val() + '", "' + $('#memPic').val() + '", "' + $('#memDescription').val() + '", "' + cat.ID + '")';
 
     if (picsArray.length == 6) {
-        var query2 = 'DELETE FROM `tbl_memories_89` WHERE `tbl_memories_89`.`ID` = ' + picsArray[0].ID + ' ;';
+        var query2 = 'DELETE FROM `tbl_memories_89` WHERE `tbl_memories_89`.`ID` = "' + picsArray[0].ID + '" ;';
 
         $.post("../backend/query.php", {
             query: query2
@@ -288,7 +289,7 @@ var updateMem = function () {
 };
 
 var deleteMem = function () {
-    var query = 'DELETE FROM `tbl_memories_89` WHERE `tbl_memories_89`.`ID` = ' + currently.ID + ' ;';
+    var query = 'DELETE FROM `tbl_memories_89` WHERE `tbl_memories_89`.`ID` = "' + currently.ID + '" ;';
     $.post("../backend/query.php", {
         query: query
     }, function (data) {
