@@ -85,7 +85,6 @@ $(document).ready(function () {
         obj = obj[0];
         cat = obj;
         $('#catName').html("" + obj.Name);
-        console.log(obj);
         var age = 'Age: ' + obj.Age + ' | Adopted: ' + obj.AdoptDate + '';
         $('#catAge').html(age);
         $('#catDesc').html("" + obj.Description);
@@ -101,15 +100,17 @@ $(document).ready(function () {
         $.post("../backend/query.php", {
             query: query2
         }, function (data) {
-            if(data != [])
-            initPics(JSON.parse(data));
+            data = JSON.parse(data);
+            if(data.length != 0)
+                initPics(JSON.parse(data));
         });
 
         $.post("../backend/query.php", {
             query: query3
         }, function (data) {
-            if(data != [])
-            initEvents(JSON.parse(data));
+            data = JSON.parse(data);
+            if(data.length != 0)
+                initEvents(JSON.parse(data));
         });
     });
 
