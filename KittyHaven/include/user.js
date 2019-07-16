@@ -102,7 +102,7 @@ $(document).ready(function () {
         }, function (data) {
             data = JSON.parse(data);
             if(data.length != 0)
-                initPics(JSON.parse(data));
+                initPics(data);
         });
 
         $.post("../backend/query.php", {
@@ -110,7 +110,7 @@ $(document).ready(function () {
         }, function (data) {
             data = JSON.parse(data);
             if(data.length != 0)
-                initEvents(JSON.parse(data));
+                initEvents(data);
         });
     });
 
@@ -118,6 +118,7 @@ $(document).ready(function () {
 });
 
 var initPics = function (data) {
+    console.log(data);
     picsArray = data;
     var count = 0;
     for (var obj of data) {
