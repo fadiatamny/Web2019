@@ -3,7 +3,8 @@ printHead("Admin interface"); ?>
 <?php require_once('./templates/navbar.php');
 printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png') ?>
 <div class="header wrapper">
-    <h1>Cats List</h1>
+    <a href="./admin.php" class="catsList"><h1>Cats List</h1></a>
+    <a href="./waitingList.php" class="waitingText"><h1>Waiting List</h1></a>
     <a href="./catForm.php" class="addBtn">ADD</a>
 </div>
 <div class="wrapper">

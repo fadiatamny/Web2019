@@ -23,11 +23,12 @@ if(isset($_POST))  {
         
             $query = 'SELECT * FROM tbl_owners_89 WHERE Username = "'.$_POST['inputUser'].'" AND Password = "'.$_POST['inputPassword'].'";';
             $res = mysqli_query($con, $query);
-            if(!$res){
+            $row = mysqli_fetch_assoc($res);
+            echo $row;
+            if(!$row){
                 header("Location: ../pages/feedback.php?feedback=Incorrect Login Please Retry&loc=login&pic=''");
             }
             else{
-                $row = mysqli_fetch_assoc($res);
                 header("Location: ../pages/feedback.php?feedback=Login Successful&loc=user&pic=''&id=".$row['ID']);
                 mysqli_close($con);
                 die();

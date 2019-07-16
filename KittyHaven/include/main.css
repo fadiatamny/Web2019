@@ -298,6 +298,56 @@ textarea:focus{
 .catPicContainer:hover .catDescription {
     transform: translateY(0);
 }
+
+.denyBtn,
+.approveBtn{
+    color: #FDA7DF;
+    border: 2px solid #FBBBE4;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.denyBtn:hover,
+.approveBtn:hover{
+    color: #ff3dbb !important;
+    border-color: #fd81d0;
+    text-decoration: none;
+}
+
+.waitingText{
+    transition: color 0.2s;
+}
+
+.waitingText h1{
+    margin-left: 5vw !important;
+}
+
+.catsList:active,
+.catsList:focus,
+.catsList:hover,
+.waitingText:active,
+.waitingText:focus,
+.waitingText:hover{
+    color: #fc86d3;
+}
+#errmsg{
+    color: #f32121;
+}
+#approveheader{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #fef8fc  ;
+  }
+
 /*-----------------------------*/
 /*header for admin search / user*/
 /*-----------------------------*/
@@ -346,7 +396,7 @@ textarea:focus{
 .addBtn{
     float: right;
     color: #FDA7DF;
-    border: 1px solid #FBBBE4;
+    border: 2px solid #FBBBE4;
     padding: 5px;
     border-radius: 5%;
     font-size: 20px;

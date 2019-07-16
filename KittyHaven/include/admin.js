@@ -35,30 +35,13 @@ $(document).ready(function () {
             console.log("err");
         }
     });
-    //     $.getJSON("../data/cats.json",function(data){
-    //         if(sessionStorage.getItem("cat") !== null){
-    //             cats = JSON.parse(sessionStorage.getItem('cats'));
-    //             if(cats === null)
-    //                 cats = data;
-    //             if(sessionStorage.getItem("cat") != 'delete')
-    //                 cats.push(JSON.parse(sessionStorage.getItem('cat')));
 
-    //             sessionStorage.clear();
-    //             $.post("../backend/write.php", { jsonFile : JSON.stringify(cats) }, function (data) {
-    //             });
-    //             initCats(cats);
-    //         }else{
-    //             initCats(data);
-    //         }
-    //         console.log(cats);
-    //     });
 });
 
 var initCats = function (data) {
     cats = data;
     var count = 0;
     var rows = [];
-    console.log(cats);
     for (var obj of cats) {
         var row;
         if (count % 3 == 0 || count == 0) {

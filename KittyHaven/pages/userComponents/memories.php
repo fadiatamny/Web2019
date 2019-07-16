@@ -76,7 +76,7 @@
     </section>
 
     <section class="picDisplay">
-        <img src="" id="memoryImg">
+        <img src="https://vignette.wikia.nocookie.net/warriorcatsclanroleplay/images/f/fc/Placeholder-pet.png/revision/latest?cb=20130716185616" id="memoryImg">
     </section>
     <div class="pagesPictures">
     </div>

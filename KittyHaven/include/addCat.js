@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $('.submitBtn').click(response);
     $('.cancelBtn').click(function () {
-        sessionStorage.clear();
+        sessionStorage.removeItem('state');
         window.location.replace("./admin.php");
     });
     $('.deleteBtn').click(function () {
@@ -21,8 +21,19 @@ $(document).ready(function () {
             query: query
         }, function (data) {
             if (data != 'NULL') {
-                sessionStorage.removeItem('cat');
-                window.location.replace("./feedback.php?feedback=Deleted&loc=admin&pic=https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png");
+                var query2 = 'DELETE FROM tbl_adoptionRequest_89 WHERE CatID = "' + cat.ID + '";';
+
+                $.post("../backend/query.php", {
+                    query: query2
+                }, function (data) {
+                    if (data != "NULL") {
+                        sessionStorage.removeItem('cat');
+                        window.location.replace("./feedback.php?feedback=Deleted&loc=admin&pic=https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png");
+                    } else {
+                        console.log("err");
+                    }
+                });
+
             } else {
                 console.log('error executing query');
             }
@@ -30,7 +41,6 @@ $(document).ready(function () {
     });
 
     if (cat != null) {
-        console.log(cat);
         sessionStorage.setItem('state', 'update');
         $('#name').val(cat.Name);
         $('#age').val(cat.Age);
@@ -90,7 +100,7 @@ var response = function () {
     }, function (data) {
         if (data != 'NULL') {
 
-            sessionStorage.clear();
+            sessionStorage.removeItem('state');
             window.location.replace(url);
         } else {
             console.log('error executing query');

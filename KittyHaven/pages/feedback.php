@@ -21,7 +21,7 @@ printHead("Redirecting..."); ?>
             echo 'sessionStorage.setItem("userID", "'.$_GET['id'].'");';
 
         echo 'setTimeout(function(){
-            localStorage.setItem("login","'.$location.'");
+            sessionStorage.setItem("login","'.$location.'");
             window.location.replace("./'.$location.'.php");
         },3000);
     </script>';

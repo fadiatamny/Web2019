@@ -85,6 +85,7 @@ $(document).ready(function () {
         obj = obj[0];
         cat = obj;
         $('#catName').html("" + obj.Name);
+        console.log(obj);
         var age = 'Age: ' + obj.Age + ' | Adopted: ' + obj.AdoptDate + '';
         $('#catAge').html(age);
         $('#catDesc').html("" + obj.Description);
@@ -97,12 +98,14 @@ $(document).ready(function () {
         $.post("../backend/query.php", {
             query: query2
         }, function (data) {
+            if(data != [])
             initPics(JSON.parse(data));
         });
 
         $.post("../backend/query.php", {
             query: query3
         }, function (data) {
+            if(data != [])
             initEvents(JSON.parse(data));
         });
     });
@@ -177,8 +180,6 @@ var initEvents = function (data) {
         heightStyle: "content"
     });
 };
-
-//ui-state-active
 
 var insertEvent = function () {
     var query = 'INSERT INTO `studDB19a`.`tbl_events_89` (`ID`, `Title`, `Description`, `CatID`) VALUES (NULL, "' + $('#eventTitle').val() + '", "' + $('#eventDes').val() + '", "' + cat.ID + '");';
