@@ -90,7 +90,10 @@ $(document).ready(function () {
         $('#catAge').html(age);
         $('#catDesc').html("" + obj.Description);
         $('.kittyPic').attr('src', 'https://' + obj.Picture);
-        $('#nickname').html('' + obj.Nickname);
+        if(obj.Nickname == 'null')
+            $('#nickname').html('' + obj.Nickname);
+        else
+            $('#nickname').html('*Placeholder*');
 
         var query2 = "SELECT * FROM tbl_memories_89 WHERE CatID ='" + obj.ID + "';";
         var query3 = "SELECT * FROM tbl_events_89 WHERE CatID ='" + obj.ID + "';";

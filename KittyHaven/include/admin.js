@@ -5,6 +5,7 @@ var selectedIndex = -1;
 (function () {
     if (sessionStorage.getItem('login') == null)
         window.location.replace("../index.html");
+
     if (sessionStorage.getItem("login") == "user") {
         window.location.replace("./user.php");
     }

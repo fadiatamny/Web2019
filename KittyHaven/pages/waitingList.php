@@ -42,8 +42,11 @@ printNav('https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-51
             <div class="modal-body" id="modalBox">
                 <div class="row justify-content-center">
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="username" placeholder="Username">
-                        <input type="text" class="form-control" id="password" placeholder="Password">
+                        <label class="waitingLabels">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Jimmy51">
+                        <label class="waitingLabels">Password:</label>
+                        <input type="text" class="form-control" id="password" placeholder="x13ysku">
+                        <label class="waitingLabels">Adoption Date:</label>
                         <input type="text" class="form-control" id="date" placeholder="XX/XX/XX">
                         <p id="errmsg">Fields must be filled! </p>
                     </div>

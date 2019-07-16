@@ -348,6 +348,10 @@ textarea:focus{
     background-color: #fef8fc  ;
   }
 
+.waitingLabels{
+    margin-top: 10px;
+}
+
 /*-----------------------------*/
 /*header for admin search / user*/
 /*-----------------------------*/
